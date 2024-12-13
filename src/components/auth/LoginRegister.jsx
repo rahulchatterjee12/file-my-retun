@@ -1,4 +1,3 @@
-"use client";
 import React, { useState } from "react";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
@@ -7,7 +6,7 @@ import {
   loginUser,
   registerUser,
 } from "@/redux/actions/auth/authActions";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { validateMobileNumber, validateEmail } from "@/helper/validation";
 import "react-toastify/dist/ReactToastify.css";
 import { toast, ToastContainer } from "react-toastify";
@@ -47,12 +46,14 @@ const LoginRegister = ({ id }) => {
         return;
       }
       setIsProcessingS(true);
+      // @ts-ignore
       const resp = await dispatch(
         loginUser(id, formData.email, formData.password)
       );
       if (resp) {
         // router.push('/home');
         console.log("resp", resp);
+        // @ts-ignore
         toast.error(resp);
       }
       setTimeout(() => {
@@ -80,8 +81,10 @@ const LoginRegister = ({ id }) => {
         mobile: formData.mobile,
         password: formData.password,
       };
+      // @ts-ignore
       const resp = await dispatch(registerUser(submitReg));
       if (resp) {
+        // @ts-ignore
         toast.error(resp);
       }
       setTimeout(() => {
@@ -91,6 +94,7 @@ const LoginRegister = ({ id }) => {
   };
 
   const handleSignInClick = () => {
+    // @ts-ignore
     dispatch(errorResetInAuth());
     setFormData({
       email: "",
@@ -103,6 +107,7 @@ const LoginRegister = ({ id }) => {
   };
 
   const handleRegisterClick = () => {
+    // @ts-ignore
     dispatch(errorResetInAuth());
     setFormData({
       email: "",
@@ -142,38 +147,29 @@ const LoginRegister = ({ id }) => {
   return (
     <>
       <ToastContainer />
-      <div className="flex py-3">
-        <div
-          className={`border-solid border-1 border-light-blue-500 border ${
-            isSignInActive ? "bg-[#5871EB]" : ""
-          }`}
-        >
+      <div className="">
+        <div className="flex py-3 justify-start ">
           <button
             onClick={handleSignInClick}
-            className={`font-medium w-[146px] text-[16px] py-[11px] ${
-              isSignInActive ? "text-white" : "text-[#A0A8B5]"
-            } hover:text-white hover:bg-[#5871EB] rounded-l-[8px]`}
+            className={`font-medium w-[146px] text-[16px] py-[11px] rounded-l-[8px] ${
+              isSignInActive
+                ? "bg-[#5871EB] text-white "
+                : "text-[#A0A8B5] border-2 border-[#DDE1EB] "
+            } `}
           >
             Sign in
           </button>
-        </div>
-        <div
-          className={`border-solid border-1 border-light-blue-500 border ${
-            !isSignInActive ? "bg-[#5871EB]" : ""
-          }`}
-        >
           <button
             onClick={handleRegisterClick}
-            className={`font-medium w-[146px] text-[16px] py-[11px] ${
-              !isSignInActive ? "text-white" : "text-[#A0A8B5]"
-            } hover:text-white hover:bg-[#5871EB]`}
+            className={`font-medium w-[146px] text-[16px] py-[11px] rounded-r-[8px] ${
+              !isSignInActive
+                ? "bg-[#5871EB] text-white "
+                : "text-[#A0A8B5] border-2 border-[#DDE1EB] "
+            } `}
           >
             Register
           </button>
         </div>
-      </div>
-
-      <div className="">
         <div className="bg-white py-8">
           <form className="space-y-6" onSubmit={handleSubmit}>
             {isSignInActive ? (
@@ -224,36 +220,18 @@ const LoginRegister = ({ id }) => {
                       onClick={togglePasswordVisibility}
                       className="absolute inset-y-0 right-0 flex items-center px-2 text-gray-400 focus:outline-none"
                     >
-                      {showPassword ? (
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="#5871EB"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <path d="M14 12c0 1.103-.897 2-2 2s-2-.897-2-2 .897-2 2-2 2 .897 2 2zM24 11.551s-4.252 7.449-11.985 7.449c-7.18 0-12.015-7.449-12.015-7.449s4.446-6.551 12.015-6.551c7.694 0 11.985 6.551 11.985 6.551zm-8 .449c0-2.208-1.791-4-4-4-2.208 0-4 1.792-4 4 0 2.209 1.792 4 4 4 2.209 0 4-1.791 4-4z" />
-                        </svg>
-                      ) : (
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="#5871EB"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <path d="M14 12c0 1.103-.897 2-2 2s-2-.897-2-2 .897-2 2-2 2 .897 2 2zM24 11.551s-4.252 7.449-11.985 7.449c-7.18 0-12.015-7.449-12.015-7.449s4.446-6.551 12.015-6.551c7.694 0 11.985 6.551 11.985 6.551zm-8 .449c0-2.208-1.791-4-4-4-2.208 0-4 1.792-4 4 0 2.209 1.792 4 4 4 2.209 0 4-1.791 4-4z" />
-                        </svg>
-                      )}
+                      {showPassword ? <>show</> : <>not show</>}
                     </button>
+                  </div>
+                </div>
+                <div className="">
+                  <div className="text-sm">
+                    <Link
+                      href={forgetUrl}
+                      className="font-medium text-indigo-600 hover:text-indigo-500"
+                    >
+                      Forgot your password?
+                    </Link>
                   </div>
                 </div>
               </>
@@ -264,16 +242,38 @@ const LoginRegister = ({ id }) => {
                     htmlFor="name"
                     className="block text-[16px] font-medium text-[#696F79]"
                   >
-                    Full Name*
+                    Name*
                   </label>
                   <div className="mt-1">
                     <input
                       id="name"
                       name="name"
                       type="text"
-                      placeholder="Enter your full name "
+                      autoComplete="name"
+                      placeholder="Enter your name "
                       required
                       value={formData.name}
+                      onChange={handleChange}
+                      className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md text-black shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block text-[16px] font-medium text-[#696F79]"
+                  >
+                    Email address*
+                  </label>
+                  <div className="mt-1">
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      autoComplete="email"
+                      placeholder="Enter your email "
+                      required
+                      value={formData.email}
                       onChange={handleChange}
                       className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md text-black shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     />
@@ -282,16 +282,47 @@ const LoginRegister = ({ id }) => {
 
                 <div>
                   <label
+                    htmlFor="password"
+                    className="block text-[16px] font-medium text-[#696F79]"
+                  >
+                    Password*
+                  </label>
+                  <div className="mt-1 relative">
+                    <input
+                      id="password"
+                      name="password"
+                      type={showPassword ? "text" : "password"}
+                      autoComplete="current-password"
+                      placeholder="Password"
+                      required
+                      value={formData.password}
+                      onChange={handleChange}
+                      className="appearance-none block w-full px-3 py-2 border text-black border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm pr-10"
+                    />
+                    <button
+                      type="button"
+                      onClick={togglePasswordVisibility}
+                      className="absolute inset-y-0 right-0 flex items-center px-2 text-gray-400 focus:outline-none"
+                    >
+                      {showPassword ? <>show</> : <>not show</>}
+                    </button>
+                  </div>
+                </div>
+
+                <div>
+                  <label
                     htmlFor="mobile"
                     className="block text-[16px] font-medium text-[#696F79]"
                   >
-                    Mobile Number*
+                    Mobile*
                   </label>
                   <div className="mt-1">
                     <input
                       id="mobile"
                       name="mobile"
                       type="text"
+                      maxLength={10}
+                      autoComplete="tel"
                       placeholder="Enter your mobile number "
                       required
                       value={formData.mobile}
@@ -300,57 +331,58 @@ const LoginRegister = ({ id }) => {
                     />
                   </div>
                 </div>
+                <div className="">
+                  <div className="flex items-center pb-2">
+                    <input
+                      id="termConditions"
+                      name="termConditions"
+                      type="checkbox"
+                      checked={formData.termConditions}
+                      onChange={handleChange}
+                      className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
+                    />
+                    <label
+                      htmlFor="termConditions"
+                      className="ml-2 block text-sm text-gray-900"
+                    >
+                      I agree to terms & conditions
+                    </label>
+                  </div>
+                </div>
               </>
             )}
-            <div className="flex justify-center">
-              <button
-                type="submit"
-                className={`w-full ${
-                  isSignInActive ? "bg-[#5871EB]" : "bg-[#696F79]"
-                } text-white py-2.5 px-6 rounded-[6px]`}
-                disabled={isProcessingS || isProcessing}
-              >
-                {isProcessingS || isProcessing
-                  ? "Processing..."
-                  : isSignInActive
-                  ? "Sign In"
-                  : "Register"}
-              </button>
-            </div>
-          </form>
 
-          <div className="mt-5 text-center">
-            {isSignInActive ? (
-              <>
-                <span className="text-[16px] font-medium text-[#696F79]">
-                  New to the platform?{" "}
-                  <Link
-                    href="#"
-                    className="text-[#5871EB]"
-                    onClick={handleRegisterClick}
-                  >
-                    Register
-                  </Link>
-                </span>
-                <p className="text-[16px] text-[#5871EB] mt-2">
-                  <Link href={forgetUrl}>Forgot password?</Link>
-                </p>
-              </>
-            ) : (
-              <>
-                <span className="text-[16px] font-medium text-[#696F79]">
-                  Already a user?{" "}
-                  <Link
-                    href="#"
-                    className="text-[#5871EB]"
-                    onClick={handleSignInClick}
-                  >
-                    Sign in
-                  </Link>
-                </span>
-              </>
-            )}
-          </div>
+            <div>
+              {localError && (
+                <div className="text-red-500 mb-2">{localError}</div>
+              )}
+
+              {isSignInActive ? (
+                <button
+                  type="submit"
+                  disabled={isProcessingS}
+                  className="w-full mb-10 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-[16px] font-medium text-white bg-[#5871EB] hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                >
+                  {isProcessingS ? "Signing..." : "Sign In"}
+                </button>
+              ) : (
+                <button
+                  type="submit"
+                  disabled={isProcessing}
+                  className="w-full mb-10 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-[16px] font-medium text-white bg-[#4640DE] hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                >
+                  {isProcessing ? "Registering..." : "Sign Up"}
+                </button>
+              )}
+            </div>
+
+            <button
+              onClick={findAccount}
+              className="w-full mt-7 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-black hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            >
+              Find Account with PAN
+            </button>
+          </form>
         </div>
       </div>
     </>
