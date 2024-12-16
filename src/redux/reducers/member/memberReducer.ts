@@ -11,7 +11,7 @@ import {
     MEMBER_PROFILE_CLEAR,
     UPDATE_MEMBER_BANK_FAILURE,
     UPDATE_MEMBER_BANK_SUCCESS,
-} from '@/redux/actions/member/types';
+} from '../../actions/member/types';
 
 export interface MemberState {
     error: string | null;

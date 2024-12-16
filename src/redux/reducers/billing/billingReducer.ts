@@ -12,7 +12,7 @@ import {
     InvoiceListSchema,
     POST_BILLING_DATA_FAILURE,
     POST_BILLING_DATA_SUCCESS
-} from '@/redux/actions/billing/types';
+} from '../../actions/billing/types';
 
 export interface BillingState {
     error: string | null;

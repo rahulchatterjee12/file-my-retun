@@ -1,12 +1,14 @@
 "use client";
-// const { createStore, applyMiddleware } = require("redux");
+
 import { createStore, applyMiddleware } from "redux";
-// const thunk = require("redux-thunk").default;
 import { thunk } from "redux-thunk";
-import rootReducer from "@/redux/reducers";
+import rootReducer from "../redux/reducers";
 
-const middleware = [thunk];
+// Apply the middleware
+const middleware = applyMiddleware(thunk);
 
-const store = createStore(rootReducer, applyMiddleware(...middleware));
+// Create the store with the rootReducer and the applied middleware
+const store = createStore(rootReducer, middleware);
 
 export default store;
+

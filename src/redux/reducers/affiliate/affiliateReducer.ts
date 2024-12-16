@@ -1,12 +1,12 @@
 import {
-    AffiliateActionTypes,
+    
     GET_AFFILIATE_DATA_FAILURE,
     GET_AFFILIATE_DATA_SUCCESS,
     GET_ALL_FY_YEAR_FAILURE,
     GET_ALL_FY_YEAR_SUCCESS,
     GET_COMPANY_CODE_FAILURE,
     GET_COMPANY_CODE_SUCCESS
-} from "@/redux/actions/affiliate/types";
+} from "../../actions/affiliate/types";
 
 
 export interface AffiliateState {
@@ -23,7 +23,7 @@ const initialState: AffiliateState = {
     allYear: {},
 };
 
-const affiliateReducer = (state = initialState, action: AffiliateActionTypes): AffiliateState => {
+const affiliateReducer = (state = initialState, action: any): AffiliateState => {
     switch (action.type) {
         case GET_COMPANY_CODE_SUCCESS:
             return {

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { getDataExist, getMEMBERExist } from "@/redux/actions/itr/itrActions";
 import { getProfileInfo } from "@/redux/actions/auth/authActions";
 

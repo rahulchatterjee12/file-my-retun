@@ -22,7 +22,7 @@ import {
     POST_OTHER_DATA_SUCCESS,
     POST_WITHOUT_LOGIN_OTHER_DATA_FAILURE,
     POST_WITHOUT_LOGIN_OTHER_DATA_SUCCESS,
-} from "@/redux/actions/other/types";
+} from "../../actions/other/types";
 
 export interface otherState {
     error: string | null;

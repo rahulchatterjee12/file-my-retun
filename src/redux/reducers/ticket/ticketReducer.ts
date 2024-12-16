@@ -10,7 +10,7 @@ import {
     POST_CREATE_TICKET_DATA_FAILURE,
     POST_CREATE_TICKET_DATA_SUCCESS,
     TicketActionsTypes
-} from "@/redux/actions/ticket/types";
+} from "../../actions/ticket/types";
 
 export interface TicketState {
     error: string | null;

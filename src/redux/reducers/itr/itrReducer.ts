@@ -34,7 +34,7 @@ import {
     POST_ITR_NRI_DATA_SUCCESS,
     POST_ITR_NRI_STATUS_DETAILS_DATA_FAILURE,
     POST_ITR_NRI_STATUS_DETAILS_DATA_SUCCESS,
-} from '@/redux/actions/itr/types';
+} from '../../actions/itr/types';
 
 export interface ItrState {
     error: string | null;

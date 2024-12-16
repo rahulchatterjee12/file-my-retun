@@ -1,11 +1,11 @@
 import { combineReducers } from "redux";
-import authReducer from "@/redux/reducers/auth/authReducer";
-import memberReducer from "@/redux/reducers/member/memberReducer";
-import billingReducer from "@/redux/reducers/billing/billingReducer";
-import itrReducer from "@/redux/reducers/itr/itrReducer";
-import otherReducer from "@/redux/reducers/other/otherReducer";
-import ticketReducer from "@/redux/reducers/ticket/ticketReducer";
-import affiliateReducer from "@/redux/reducers/affiliate/affiliateReducer";
+import authReducer from "../reducers/auth/authReducer";
+import memberReducer from "../reducers/member/memberReducer";
+import billingReducer from "../reducers/billing/billingReducer";
+import itrReducer from "../reducers/itr/itrReducer";
+import otherReducer from "../reducers/other/otherReducer";
+import ticketReducer from "../reducers/ticket/ticketReducer";
+import affiliateReducer from "../reducers/affiliate/affiliateReducer";
 
 const rootReducer = combineReducers({
   auth: authReducer,

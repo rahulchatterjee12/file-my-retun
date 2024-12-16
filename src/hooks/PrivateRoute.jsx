@@ -1,5 +1,5 @@
 import React from "react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { ErrorMessage } from "@/components/Common/ErrorMessage";
 
 const PrivateRoute = ({ isUserLoggedIn, userData, WrappedComponent }) => {

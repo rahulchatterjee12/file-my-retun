@@ -21,7 +21,7 @@ import {
   UPDATE_PROFILE_INFO,
   GET_LOG_OUT_SUCCESS,
   GET_LOG_OUT_FAILURE,
-} from "@/redux/actions/auth/types";
+} from "../../actions/auth/types";
 
 const initialState = {
   error: null,
