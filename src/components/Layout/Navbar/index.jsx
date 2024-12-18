@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -20,10 +20,15 @@ const navItems = ["Home", "Services", "About Us"];
 
 function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [isClient, setIsClient] = useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const drawer = (
     <Box
@@ -48,70 +53,74 @@ function Navbar() {
 
   return (
     <>
-      <CssBaseline />
-      <AppBar
-        component="nav"
-        sx={{
-          background: "white",
-          color: "black",
-          boxShadow: 0,
-        }}
-      >
-        <Toolbar>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}>
-            <Logo />
-          </Box>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: "black" }}>
-                {item}
-              </Button>
-            ))}
-            <Button
-              variant="outlined"
+      {isClient && (
+        <>
+          <CssBaseline />
+          <AppBar
+            component="nav"
+            sx={{
+              background: "white",
+              color: "black",
+              boxShadow: 0,
+            }}
+          >
+            <Toolbar>
+              <Box sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}>
+                <Logo />
+              </Box>
+              <Box sx={{ display: { xs: "none", sm: "block" } }}>
+                {navItems.map((item) => (
+                  <Button key={item} sx={{ color: "black" }}>
+                    {item}
+                  </Button>
+                ))}
+                <Button
+                  variant="outlined"
+                  sx={{
+                    color: "#4640DE",
+                    borderColor: "#4640DE",
+                    borderRadius: "10px",
+                  }}
+                >
+                  Sign in / Sign up
+                </Button>
+              </Box>
+              <div className="flex md:hidden justify-between items-center w-full">
+                <Box sx={{ mr: 2, display: { sm: "none" } }}>
+                  <Logo />
+                </Box>
+                <IconButton
+                  color="inherit"
+                  onClick={handleDrawerToggle}
+                  sx={{ mr: 2, display: { sm: "none" } }}
+                >
+                  <MenuIcon />
+                </IconButton>
+              </div>
+            </Toolbar>
+          </AppBar>
+          <nav>
+            <Drawer
+              variant="temporary"
+              anchor="right"
+              open={mobileOpen}
+              onClose={handleDrawerToggle}
+              ModalProps={{
+                keepMounted: true,
+              }}
               sx={{
-                color: "#4640DE",
-                borderColor: "#4640DE",
-                borderRadius: "10px",
+                display: { xs: "block", sm: "none" },
+                "& .MuiDrawer-paper": {
+                  boxSizing: "border-box",
+                  width: drawerWidth,
+                },
               }}
             >
-              Sign in / Sign up
-            </Button>
-          </Box>
-          <div className="flex md:hidden justify-between items-center w-full">
-            <Box sx={{ mr: 2, display: { sm: "none" } }}>
-              <Logo />
-            </Box>
-            <IconButton
-              color="inherit"
-              onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { sm: "none" } }}
-            >
-              <MenuIcon />
-            </IconButton>
-          </div>
-        </Toolbar>
-      </AppBar>
-      <nav>
-        <Drawer
-          variant="temporary"
-          anchor="right"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true,
-          }}
-          sx={{
-            display: { xs: "block", sm: "none" },
-            "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
-              width: drawerWidth,
-            },
-          }}
-        >
-          {drawer}
-        </Drawer>
-      </nav>
+              {drawer}
+            </Drawer>
+          </nav>
+        </>
+      )}
     </>
   );
 }
