@@ -29,7 +29,7 @@ const Login = () => {
     <div className="bg-white bg-right-blue">
       {/* <Header /> */}
       <div className="max-w-[1140px] 2xl:max-w-[1320px] lg:px-10 xl:px-0 mx-auto mb-[100px]">
-        <div className="md:flex justify-between items-start">
+        <div className="md:flex justify-between items-center">
           <div
             className="w-full md:w-[40%] lg:w-[62%] mt-6 hidden md:block"
             data-aos="fade-left"
