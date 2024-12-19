@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.embla {
+  overflow: hidden;
+  position: relative;
+}
+
+.embla__container {
+  display: flex;
+  gap: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.embla__slide {
+  flex: 0 0 401px;
+  transition: transform 0.3s ease;
+}
+
+.embla__slide--dummy {
+  flex: 0 0 20%;
+  pointer-events: none;
+  visibility: hidden;
+}

@@ -21,6 +21,18 @@ const Youtube = () => {
           </div>
         </div>
       </div>
+
+      <div className="md:h-[155px] md:px-[125px] md:py-[49px] bg-[#4640DE] md:mt-[70px] flex justify-between">
+        <div>
+          <h3 className="text-[28px] text-white">Need more help?</h3>
+          <p className="text-[#BABABA] text-[14px]">
+            Go through all our video's and increase your financial literacy
+          </p>
+        </div>
+        <button className="bg-white text-[#4640DE] px-[30px] py-[20px] rounded-md text-[17px]">
+          More videos
+        </button>
+      </div>
     </div>
   );
 };
