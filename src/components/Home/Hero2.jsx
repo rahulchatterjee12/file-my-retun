@@ -4,7 +4,7 @@ const Hero2 = () => {
   return (
     <div className="bg-[#DDDDFE] flex justify-around  pt-8">
       <img
-        src="assets/images/home/businessman.png"
+        src="assets/images/Home/Businessman.png"
         className="w-[110px] h-[208px] md:h-[537px] md:w-[537px]"
       />
       <div className=" w-[50%] md:w-[35%] md:mt-8 mt-4  text-center mb-5">

@@ -2,6 +2,10 @@ import React from "react";
 import Hero from "./Hero";
 import Hero2 from "./Hero2";
 import Brands from "./Brands";
+import Highlights from "./Highlights";
+import Services from "./Services";
+import Benefits from "./Benefits";
+import Youtube from "./Youtube";
 
 const HomePage = () => {
   return (
@@ -9,6 +13,10 @@ const HomePage = () => {
       <Hero />
       <Brands />
       <Hero2 />
+      <Highlights />
+      <Services />
+      <Benefits />
+      <Youtube />
     </div>
   );
 };
