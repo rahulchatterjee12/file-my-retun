@@ -7,6 +7,8 @@ import Services from "./Services";
 import Benefits from "./Benefits";
 import Youtube from "./Youtube";
 import Plans from "./Plans";
+import Testimonials from "./Testimonials";
+import Story from "./Story";
 
 const HomePage = () => {
   return (
@@ -19,6 +21,8 @@ const HomePage = () => {
       <Benefits />
       <Youtube />
       <Plans />
+      <Story />
+      <Testimonials />
     </div>
   );
 };
