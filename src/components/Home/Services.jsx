@@ -1,5 +1,6 @@
 import React from "react";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
+import MobileCarousel from "../common/MobileCarousel";
 
 const cardDetails = [
   {
@@ -70,28 +71,33 @@ const cardDetails = [
 
 const ServicesCard = ({ item }) => {
   return (
-    <div className="relative w-[381px] h-[300px] rounded-[6px] shadow-md px-[22px] py-[17px] font-bold">
+    <div className="relative w-[320px] md:w-[381px] h-[300px] rounded-[6px] shadow-md px-[22px] py-[17px] font-bold">
       <img
         src="assets/images/Home/arrow.png"
         alt=""
         className="w-[47px] md:w-[69px] h-[47px] md:h-[69px] absolute -top-[17px] -right-[17px]"
       />
-      <h3 className="text-[#4640DE] md:text-[20px]">{item.title}</h3>
-      <h5 className="md:text-[14px] mt-[10px]">
+      <h3 className="text-[#4640DE] text-[16px] md:text-[20px]">
+        {item.title}
+      </h3>
+      <h5 className="text-[12px] md:text-[14px] mt-[10px]">
         {item.subTitle && item.subTitle}
       </h5>
       <div className="mt-[4px]">
         {item.types.map((type, i) => (
-          <div key={i} className="flex items-start align-middle mt-[4px]">
+          <div
+            key={i}
+            className="flex items-start align-middle mt-[8px] md:mt-[4px]"
+          >
             <CheckCircleOutlineIcon
               sx={{
                 fontWeight: 500,
               }}
             />
             <p
-              className={`text-[${
+              className={`md:text-[${
                 item.title === "Investments" ? "14px" : "12px"
-              }] font-extralight ml-[15px]`}
+              }] text-[10px] font-extralight ml-[15px]`}
             >
               {type}
             </p>
@@ -114,12 +120,22 @@ const Services = () => {
         What services does{" "}
         <span className="text-[#4640DE]">File my return offer ?</span>
       </h2>
-      <div className="flex justify-center">
+      <div className="md:flex justify-center hidden">
         <div className="grid grid-cols-3 gap-[30px] mt-[45px]">
           {cardDetails.map((card, i) => (
             <ServicesCard item={card} key={i} />
           ))}
         </div>
+      </div>
+
+      <div className="md:hidden flex ml-5">
+        <MobileCarousel>
+          <div className="m__embla__slide flex my-5 gap-[20px]">
+            {cardDetails.map((card, i) => (
+              <ServicesCard item={card} key={i} />
+            ))}
+          </div>
+        </MobileCarousel>
       </div>
       <div className="flex justify-center">
         <img

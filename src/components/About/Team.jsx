@@ -1,8 +1,4 @@
 import React from "react";
-import Image from "next/image";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const team = [
   {
@@ -64,37 +60,36 @@ const team = [
 ];
 
 const Team = () => {
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 3000,
-    slidesToShow: 6,
-    slidesToScroll: 1,
-    autoplay: true,
-    cssEase: "linear",
-    pauseOnHover: true,
-    autoplaySpeed: 0,
-    trl: true,
-    swipeToSlide: true,
-  };
-
   return (
     <>
       <div className="max-w-[1140px] 2xl:max-w-[1320px] px-3 lg:px-10 xl:px-0 mx-auto mb-20">
         <p className="font-normal text-[36px] py-10">
           Meet the <span className="text-[#4640DE]">Team</span>
         </p>
-        <div>
-          <Slider {...settings}>
+        <div className="flex overflow-hidden group">
+          <div className="animate-loop-scroll flex group-hover:paused">
             {team.map((item, i) => (
-              <div className="px-3">
-                <Image src={item.img} alt="logo" width={200} height={200} />
+              <div className="px-3 flex flex-col w-[200px]" key={i}>
+                <img src={item.img} alt="logo" width={200} height={200} />
                 <p className="font-normal text-[18px] text-black-300 text-center">
                   {item.name}
                 </p>
               </div>
             ))}
-          </Slider>
+          </div>
+          <div
+            className="animate-loop-scroll flex group-hover:paused"
+            aria-hidden="true"
+          >
+            {team.map((item, i) => (
+              <div className="px-3 flex flex-col w-[200px]" key={i}>
+                <img src={item.img} alt="logo" width={200} height={200} />
+                <p className="font-normal text-[18px] text-black-300 text-center">
+                  {item.name}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>

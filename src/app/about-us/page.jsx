@@ -43,10 +43,8 @@ export default function AboutUsPage() {
             <div className="px-1" key={i}>
               <img
                 src="/assets/ceoPic/qimat.png"
-                alt="logo"
-                width={336}
-                height={336}
-                className="rounded md:w-[336px] w-[246px] md:h-[336px] h-[246px]"
+                alt={item.name}
+                className="rounded md:w-[336px] w-[246px] hover:cursor-pointer grayscale hover:grayscale-0 transition-all duration-300 ease-in-out"
               />
               <div className="flex items-center">
                 <Link href={item.linkedin}>
@@ -109,7 +107,7 @@ export default function AboutUsPage() {
             <img
               src="/assets/team/team.png"
               alt="logo"
-              className="md:w-[640px] md:h-[300px] w-[356px] h-[311px]"
+              className="md:w-[640px] w-[356px]  grayscale hover:cursor-pointer hover:grayscale-0 transition-all duration-300 ease-in-out"
             />
           </div>
         </div>

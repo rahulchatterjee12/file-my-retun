@@ -17,11 +17,20 @@
 
 .embla__container {
   display: flex;
-  gap: 1rem;
   transition: transform 0.3s ease;
 }
 
+.embla__viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
 .embla__slide {
+  flex: 0 0 401px;
+  transition: transform 0.3s ease;
+}
+
+.m__embla__slide {
   flex: 0 0 401px;
   transition: transform 0.3s ease;
 }
@@ -30,4 +39,10 @@
   flex: 0 0 20%;
   pointer-events: none;
   visibility: hidden;
+}
+
+@layer utilities {
+  .paused {
+    animation-play-state: paused;
+  }
 }

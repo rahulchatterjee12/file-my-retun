@@ -97,7 +97,7 @@ const plans = [
 
 const PlanCart = ({ plan }) => {
   return (
-    <div className="embla__slide w-[401px] h-[586px] shadow-md rounded-[21px] border-[2px] border-[#262378]">
+    <div className="embla__slide md:w-[401px] w-[271px] md:h-[586px] h-[396px] shadow-md rounded-[21px] border-[2px] border-[#262378]">
       <div className="border-b-[2px] border-b-[#262378] pb-[12px]">
         <h4 className="text-[#4640DE] text-[24px] font-bold text-center mt-[15px]">
           {plan.title}
@@ -157,6 +157,7 @@ const PlanCart = ({ plan }) => {
 };
 
 const Carousel = () => {
+  const length = plans.length;
   const [emblaRef, embla] = useEmblaCarousel({
     loop: false,
     align: "center",
@@ -206,51 +207,65 @@ const Carousel = () => {
   }, [embla, onSelect, scrollToCenter]);
 
   return (
-    <div className="carousel-container">
-      <div className="embla" ref={emblaRef}>
-        <div className="embla__container">
-          {/* Dummy slides for scroll room */}
-          <div className="embla__slide embla__slide--dummy" />
-          <div className="embla__slide embla__slide--dummy" />
-          {plans.map((plan, i) => {
-            const isSelected = i === selectedIndex;
-            const isNext = i === selectedIndex + 1;
-            const isPrev = i === selectedIndex - 1;
+    <>
+      <div className="carousel-container">
+        <div className="embla" ref={emblaRef}>
+          <div className="embla__container md:gap-[20px] gap-[10px] md:px-0 px-2 ml-24">
+            {/* Dummy slides for scroll room */}
+            <div className="embla__slide embla__slide--dummy" />
+            <div className="embla__slide embla__slide--dummy" />
+            {plans.map((plan, i) => {
+              const isSelected = i === selectedIndex;
+              const isNext = i === selectedIndex + 1;
+              const isPrev = i === selectedIndex - 1;
 
-            let scaleClass = "scale-75";
-            if (isSelected) {
-              scaleClass = "scale-100 z-10";
-            } else if (isNext || isPrev) {
-              scaleClass = "scale-90";
-            } else {
-              scaleClass = "scale-75";
-            }
+              let scaleClass = "md:scale-75";
+              if (isSelected) {
+                scaleClass = "md:scale-100 z-10";
+              } else if (isNext || isPrev) {
+                scaleClass = "md:scale-90";
+              } else {
+                scaleClass = "md:scale-75";
+              }
 
-            return (
-              <div className={`embla__slide ${scaleClass}`} key={i}>
-                <PlanCart plan={plan} />
-              </div>
-            );
-          })}
+              return (
+                <div className={`embla__slide ${scaleClass}`} key={i}>
+                  <PlanCart plan={plan} />
+                </div>
+              );
+            })}
+          </div>
         </div>
+
+        <button
+          onClick={handlePrev}
+          disabled={!embla?.canScrollPrev()}
+          className="absolute left-5 md:block hidden"
+        >
+          <img src="assets/images/Home/previous.png" />
+        </button>
+
+        <button
+          onClick={handleNext}
+          disabled={!embla?.canScrollNext()}
+          className="absolute right-5 md:block hidden"
+        >
+          <img src="assets/images/Home/next.png" />
+        </button>
       </div>
-
-      <button
-        onClick={handlePrev}
-        disabled={!embla?.canScrollPrev()}
-        className="absolute left-5"
-      >
-        <img src="assets/images/Home/previous.png" />
-      </button>
-
-      <button
-        onClick={handleNext}
-        disabled={!embla?.canScrollNext()}
-        className="absolute right-5"
-      >
-        <img src="assets/images/Home/next.png" />
-      </button>
-    </div>
+      <div className="flex justify-center my-10 gap-[2px]">
+        {Array.from({ length }, (_, index) => (
+          <div
+            key={index}
+            className={`${
+              index === selectedIndex
+                ? "md:w-[87px] w-[39px] bg-[#4640DE]"
+                : "w-[11px] bg-[#D9D9D9] border-[#A8A8A8]"
+            } md:h-[11px] h-[6px] rounded-full border-[2px]  transition-all duration-300 ease-in-out`}
+          />
+        ))}
+      </div>
+    </>
   );
 };
 
