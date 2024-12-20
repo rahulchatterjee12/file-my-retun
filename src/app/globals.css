@@ -26,7 +26,7 @@
 }
 
 .embla__slide {
-  flex: 0 0 401px;
+  flex: 0 0;
   transition: transform 0.3s ease;
 }
 
