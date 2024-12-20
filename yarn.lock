@@ -1726,6 +1726,11 @@ sweetalert2@^11.15.0:
   resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-11.15.0.tgz#d591d2cba05c14b696ff7343e1644de0c82d176a"
   integrity sha512-34Xs0CFBac6I1cGG9d+XaBqJrp0F/0prr8rMYOcU0shU/XmkGkRtlCxWNi7PdKYGw9Qf6aoEHNYicX3au37nkw==
 
+swiper@^11.1.15:
+  version "11.1.15"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-11.1.15.tgz#e2258c8d38282e2f115ca463d6e8c5b84cdcf1ca"
+  integrity sha512-IzWeU34WwC7gbhjKsjkImTuCRf+lRbO6cnxMGs88iVNKDwV+xQpBCJxZ4bNH6gSrIbbyVJ1kuGzo3JTtz//CBw==
+
 tailwindcss@^3.4.1:
   version "3.4.16"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.4.16.tgz#35a7c3030844d6000fc271878db4096b6a8d2ec9"

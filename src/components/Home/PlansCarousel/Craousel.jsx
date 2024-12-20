@@ -1,6 +1,17 @@
 "use client";
-import React, { useCallback, useEffect, useRef, useState } from "react";
-import useEmblaCarousel from "embla-carousel-react";
+import React, { useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+
+import "./styles.css";
+
+// import required modules
+import { EffectCoverflow, Pagination } from "swiper/modules";
 
 const plans = [
   {
@@ -97,7 +108,7 @@ const plans = [
 
 const PlanCart = ({ plan }) => {
   return (
-    <div className="embla__slide md:w-[401px] w-[271px] md:h-[586px] h-[396px] shadow-md rounded-[21px] border-[2px] border-[#262378]">
+    <div className="md:w-[401px] w-[271px] md:h-[586px] h-[396px] shadow-md rounded-[21px] border-[2px] border-[#262378]">
       <div className="border-b-[2px] border-b-[#262378] pb-[12px]">
         <h4 className="text-[#4640DE] text-[20px] md:text-[24px] font-bold text-center mt-[8px] md:mt-[15px]">
           {plan.title}
@@ -184,126 +195,32 @@ const PlanCart = ({ plan }) => {
   );
 };
 
-const Carousel = () => {
-  const length = plans.length;
-  const [emblaRef, embla] = useEmblaCarousel({
-    loop: false,
-    align: "center",
-  });
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 900);
-    };
-    handleResize();
-  }, []);
-
-  // Calculate center index
-  const getCenterIndex = useCallback(() => {
-    return isMobile ? 0 : Math.floor(length / 2) - 1;
-  }, [isMobile, length]);
-
-  const scrollToCenter = useCallback(() => {
-    if (!embla) return;
-
-    const centerIndex = getCenterIndex();
-    embla.scrollTo(centerIndex);
-    setSelectedIndex(centerIndex);
-  }, [embla, getCenterIndex]);
-
-  const scrollTo = useCallback(
-    (index) => {
-      if (!embla) return;
-      embla.scrollTo(index);
-      setSelectedIndex(index);
-    },
-    [embla]
-  );
-
-  const onSelect = useCallback(() => {
-    if (!embla) return;
-    setSelectedIndex(embla.selectedScrollSnap());
-  }, [embla]);
-
-  const handleNext = useCallback(() => {
-    if (!embla || !embla.canScrollNext()) return;
-    embla.scrollNext();
-  }, [embla]);
-
-  const handlePrev = useCallback(() => {
-    if (!embla || !embla.canScrollPrev()) return;
-    embla.scrollPrev();
-  }, [embla]);
-
-  useEffect(() => {
-    if (!embla) return;
-    embla.on("select", onSelect);
-    scrollToCenter();
-  }, [embla, onSelect, scrollToCenter]);
-
+export default function Carousel() {
   return (
-    <>
-      <div className="carousel-container">
-        <div className="embla" ref={emblaRef}>
-          <div className="embla__container md:gap-[20px] gap-[30px] md:px-0 px-2 ml-10">
-            {/* Dummy slides for scroll room */}
-
-            {plans.map((plan, i) => {
-              const isSelected = i === selectedIndex;
-              const isNext = i === selectedIndex + 1;
-              const isPrev = i === selectedIndex - 1;
-
-              let scaleClass = "md:scale-75";
-              if (isSelected) {
-                scaleClass = "md:scale-100";
-              } else if (isNext || isPrev) {
-                scaleClass = "md:scale-90";
-              } else {
-                scaleClass = "md:scale-75";
-              }
-
-              return (
-                <div className={`embla__slide ${scaleClass}`} key={i}>
-                  <PlanCart plan={plan} />
-                </div>
-              );
-            })}
-            <div className="embla__slide embla__slide--dummy md:hidden" />
-          </div>
-        </div>
-
-        <button
-          onClick={handlePrev}
-          disabled={!embla?.canScrollPrev()}
-          className="absolute left-5 md:block hidden"
-        >
-          <img src="assets/images/Home/previous.png" />
-        </button>
-
-        <button
-          onClick={handleNext}
-          disabled={!embla?.canScrollNext()}
-          className="absolute right-5 md:block hidden"
-        >
-          <img src="assets/images/Home/next.png" />
-        </button>
-      </div>
-      <div className="flex justify-center my-10 gap-[2px]">
-        {Array.from({ length }, (_, index) => (
-          <div
-            key={index}
-            className={`${
-              index === selectedIndex
-                ? "md:w-[87px] w-[39px] bg-[#4640DE]"
-                : "w-[11px] bg-[#D9D9D9] border-[#A8A8A8]"
-            } md:h-[11px] h-[6px] rounded-full border-[2px]  transition-all duration-300 ease-in-out`}
-          />
+    <div className="slider-container">
+      <Swiper
+        effect={"coverflow"}
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView={"auto"}
+        coverflowEffect={{
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 2.25,
+          slideShadows: false,
+        }}
+        pagination={true}
+        modules={[EffectCoverflow, Pagination]}
+        className="mySwiper"
+        spaceBetween={200}
+      >
+        {plans.map((plan, i) => (
+          <SwiperSlide key={i}>
+            <PlanCart plan={plan} />
+          </SwiperSlide>
         ))}
-      </div>
-    </>
+      </Swiper>
+    </div>
   );
-};
-
-export default Carousel;
+}

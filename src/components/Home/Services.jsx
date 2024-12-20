@@ -75,7 +75,7 @@ const ServicesCard = ({ item }) => {
       <img
         src="assets/images/Home/arrow.png"
         alt=""
-        className="w-[47px] md:w-[69px] h-[47px] md:h-[69px] absolute -top-[17px] -right-[17px]"
+        className="w-[45px] md:w-[69px] h-[45px] md:h-[69px] absolute -top-[23px] -right-[23px]"
       />
       <h3 className="text-[#4640DE] text-[16px] md:text-[20px]">
         {item.title}
