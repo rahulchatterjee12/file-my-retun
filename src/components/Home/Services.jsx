@@ -71,7 +71,7 @@ const cardDetails = [
 
 const ServicesCard = ({ item }) => {
   return (
-    <div className="relative w-[320px] md:w-[381px] h-[300px] rounded-[6px] shadow-md px-[22px] py-[17px] font-bold">
+    <div className="m__embla__slide shrink-0 grow-0 relative w-[320px] md:w-[381px] h-[300px] rounded-[6px] shadow-md px-[22px] py-[17px] font-bold">
       <img
         src="assets/images/Home/arrow.png"
         alt=""
@@ -130,11 +130,9 @@ const Services = () => {
 
       <div className="md:hidden flex ml-5">
         <MobileCarousel>
-          <div className="m__embla__slide flex my-5 gap-[20px]">
-            {cardDetails.map((card, i) => (
-              <ServicesCard item={card} key={i} />
-            ))}
-          </div>
+          {cardDetails.map((card, i) => (
+            <ServicesCard item={card} key={i} />
+          ))}
         </MobileCarousel>
       </div>
       <div className="flex justify-center">

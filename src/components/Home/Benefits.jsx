@@ -66,13 +66,13 @@ const Benefits = () => {
           </div>
         </div>
 
-        <MobileCarousel>
-          <div className="flex gap-[20px] md:hidden ml-2">
+        <div className="md:hidden ml-2">
+          <MobileCarousel>
             <div
+              className="m__embla__slide shrink-0 grow-0 bg-[#8783F5] w-[322px] h-[86px] px-[18px] py-3 md:py-[25px]"
               style={{
                 borderRadius: "10px",
               }}
-              className="bg-[#8783F5] w-[322px]  h-[86px] px-[18px] py-3 md:py-[25px]"
             >
               <h3 className="text-white text-[12px] md:text-[24px] font-bold">
                 Claim Tax Refunds
@@ -82,10 +82,10 @@ const Benefits = () => {
               </p>
             </div>
             <div
+              className="m__embla__slide shrink-0 grow-0 bg-[#8783F5] w-[322px]  h-[86px] px-[18px] py-3 md:py-[25px]"
               style={{
                 borderRadius: "10px",
               }}
-              className="bg-[#8783F5] w-[322px]  h-[86px] px-[18px] py-3 md:py-[25px]"
             >
               <h3 className="text-white text-[12px] md:text-[24px] font-bold">
                 Getting Visa
@@ -96,10 +96,10 @@ const Benefits = () => {
               </p>
             </div>
             <div
+              className="m__embla__slide shrink-0 grow-0 bg-[#8783F5] w-[322px]  h-[86px] px-[18px] py-3 md:py-[25px]"
               style={{
                 borderRadius: "10px",
               }}
-              className="bg-[#8783F5] w-[322px]  h-[86px] px-[18px] py-3 md:py-[25px]"
             >
               <h3 className="text-white text-[12px] md:text-[24px] font-bold">
                 Avoid Late Filing Fee
@@ -110,10 +110,10 @@ const Benefits = () => {
               </p>
             </div>
             <div
+              className="m__embla__slide shrink-0 grow-0 bg-[#8783F5] w-[322px]  h-[86px] px-[18px] py-3 md:py-[25px]"
               style={{
                 borderRadius: "10px",
               }}
-              className="bg-[#8783F5] w-[322px]  h-[86px] px-[18px] py-3 md:py-[25px]"
             >
               <h3 className="text-white text-[12px] md:text-[24px] font-bold">
                 Getting Loan or Credit Card
@@ -123,8 +123,8 @@ const Benefits = () => {
                 easily
               </p>
             </div>
-          </div>
-        </MobileCarousel>
+          </MobileCarousel>
+        </div>
       </div>
     </div>
   );

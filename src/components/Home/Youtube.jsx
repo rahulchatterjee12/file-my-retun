@@ -24,8 +24,8 @@ const Youtube = () => {
       </div>
 
       <div className="md:hidden ">
-        <MobileCarousel>
-          <div className=" flex gap-4 px-4">
+        <div className=" flex gap-4 px-4">
+          <MobileCarousel>
             <div className="flex justify-center items-center min-w-[282px] min-h-[201px] rounded-[10px] border-[1px] border-gray-200">
               <div className="w-[97%] h-[97%] bg-white rounded-[10px] border-[1px] border-gray-100"></div>
             </div>
@@ -35,8 +35,8 @@ const Youtube = () => {
             <div className="flex justify-center items-center min-w-[282px] h-[201px] rounded-[10px] border-[1px] border-gray-200">
               <div className="w-[97%] h-[97%] bg-white rounded-[10px] border-[1px] border-gray-100"></div>
             </div>
-          </div>
-        </MobileCarousel>
+          </MobileCarousel>
+        </div>
       </div>
 
       <div className="md:h-[155px] md:px-[125px] md:py-[49px] bg-[#4640DE] md:mt-[70px] md:flex hidden justify-between">
