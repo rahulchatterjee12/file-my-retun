@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef, useState } from "react";
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
@@ -11,7 +11,7 @@ import "swiper/css/pagination";
 import "./styles.css";
 
 // import required modules
-import { EffectCoverflow, Pagination } from "swiper/modules";
+import { EffectCoverflow, Pagination, navigation } from "swiper/modules";
 
 const plans = [
   {
@@ -215,6 +215,12 @@ export default function Carousel() {
         className="mySwiper"
         spaceBetween={200}
       >
+        <SwiperButtonPev>
+          <img src="assets/images/Home/previous.png" />
+        </SwiperButtonPev>
+        <SwiperButtonNext>
+          <img src="assets/images/Home/next.png" />
+        </SwiperButtonNext>
         {plans.map((plan, i) => (
           <SwiperSlide key={i}>
             <PlanCart plan={plan} />
@@ -224,3 +230,21 @@ export default function Carousel() {
     </div>
   );
 }
+
+const SwiperButtonNext = ({ children }) => {
+  const swiper = useSwiper();
+  return (
+    <div className="absolute right-5 z-20 top-[48%] hidden md:block">
+      <button onClick={() => swiper.slideNext()}>{children}</button>;
+    </div>
+  );
+};
+
+const SwiperButtonPev = ({ children }) => {
+  const swiper = useSwiper();
+  return (
+    <div className="absolute left-5 z-20 top-[48%] hidden md:block">
+      <button onClick={() => swiper.slidePrev()}>{children}</button>;
+    </div>
+  );
+};
