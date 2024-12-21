@@ -75,7 +75,7 @@ const ServicesCard = ({ item }) => {
       <img
         src="assets/images/Home/arrow.png"
         alt=""
-        className="w-[45px] md:w-[69px] h-[45px] md:h-[69px] absolute -top-[23px] -right-[23px]"
+        className="w-[45px] hidden md:block md:w-[69px] h-[45px] md:h-[69px] absolute -top-[23px] -right-[23px]"
       />
       <h3 className="text-[#4640DE] text-[16px] md:text-[20px]">
         {item.title}
@@ -104,11 +104,14 @@ const ServicesCard = ({ item }) => {
           </div>
         ))}
       </div>
-      <img
-        src="assets/images/Home/avatars.png"
-        alt=""
-        className="bottom-[17px] absolute"
-      />
+      <div className=" bottom-[10px] absolute">
+        <div className="md:justify-start flex gap-[75px]">
+          <img src="assets/images/Home/avatars.png" alt="" className="" />
+          <button className="md:hidden text-[12px] bg-[#4640DE] py-[5px] px-[10px] text-white rounded-[20px]">
+            Know More
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
