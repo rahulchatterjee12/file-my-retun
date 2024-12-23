@@ -14,13 +14,20 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import Logo from "@/components/common/Logo";
+import { useRouter, usePathname } from "next/navigation";
 
 const drawerWidth = 240;
-const navItems = ["Home", "Services", "About Us"];
+const navItems = [
+  { title: "Home", href: "/" },
+  { title: "Services", href: "/services" },
+  { title: "About Us", href: "/about-us" },
+];
 
 function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [isClient, setIsClient] = useState(false);
+  const router = useRouter();
+  const path = usePathname();
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -41,9 +48,13 @@ function Navbar() {
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center", color: "black" }}>
-              <ListItemText primary={item} />
+          <ListItem key={item.title} disablePadding>
+            <ListItemButton
+              sx={{ textAlign: "center", color: "black" }}
+              onClick={() => router.push(item.href)}
+              disableRipple
+            >
+              <ListItemText primary={item.title} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -65,14 +76,39 @@ function Navbar() {
             }}
           >
             <Toolbar>
-              <Box sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}>
-                <Logo />
+              <Box sx={{ flexGrow: 1, display: "flex", gap: "25px" }}>
+                <Box sx={{ display: { xs: "none", sm: "block" } }}>
+                  <Logo />
+                </Box>
+
+                {/* Brand logo */}
+                {/* <Box sx={{ display: { xs: "none", sm: "block" } }}>
+                  <Logo />
+                </Box> */}
               </Box>
-              <Box sx={{ display: { xs: "none", sm: "block" } }}>
+              <Box
+                sx={{
+                  display: { xs: "none", sm: "block", md: "flex" },
+                  gap: 5,
+                }}
+              >
                 {navItems.map((item) => (
-                  <Button key={item} sx={{ color: "black" }}>
-                    {item}
-                  </Button>
+                  <button
+                    className={`relative px-4 py-2 text-sm ${
+                      item.href === path ? "text-[#4640DE]" : "text-[#666666]"
+                    }`}
+                    key={item.title}
+                    onClick={() => router.push(item.href)}
+                  >
+                    {item.title}
+                    <span
+                      className={`absolute bottom-0 left-0 h-[2px] w-full transform origin-left transition-transform duration-300 ${
+                        item.href === path
+                          ? "scale-x-100 bg-[#4640DE]"
+                          : "scale-x-0 bg-transparent"
+                      }`}
+                    />
+                  </button>
                 ))}
                 <Button
                   variant="outlined"
@@ -81,6 +117,7 @@ function Navbar() {
                     borderColor: "#4640DE",
                     borderRadius: "10px",
                   }}
+                  onClick={() => router.push("/auth")}
                 >
                   Sign in / Sign up
                 </Button>
