@@ -2,6 +2,7 @@ import React from "react";
 import Hero from "./Hero";
 import Benefits from "./Benefits";
 import Contact from "./Contact";
+import DetailsPopup from "./DetailsPopup";
 
 const Services = ({ data }) => {
   return (
@@ -11,7 +12,9 @@ const Services = ({ data }) => {
         description={data.description}
         imgUrl={data.imgUrl}
       />
-      <Benefits data={data} />
+      <div className="mt-[30px] md:mt-[109px]">
+        <Benefits data={data} />
+      </div>
       <Contact />
     </div>
   );
