@@ -42,7 +42,7 @@ function Navbar() {
       onClick={handleDrawerToggle}
       sx={{ textAlign: "center", color: "black" }}
     >
-      <Box sx={{ my: 2 }}>
+      <Box sx={{ my: 2, display: "flex", justifyContent: "center" }}>
         <Logo />
       </Box>
       <Divider />
@@ -50,7 +50,10 @@ function Navbar() {
         {navItems.map((item) => (
           <ListItem key={item.title} disablePadding>
             <ListItemButton
-              sx={{ textAlign: "center", color: "black" }}
+              sx={{
+                textAlign: "start",
+                color: item.href !== path ? "black" : "#4640DE",
+              }}
               onClick={() => router.push(item.href)}
               disableRipple
             >
