@@ -34,7 +34,7 @@ const ceos = [
 export default function AboutUsPage() {
   return (
     <>
-      <div className="max-w-[1140px] 2xl:max-w-[1320px] px-3 lg:px-10 xl:px-0 mx-auto pt-20">
+      <div className="max-w-[1140px] 2xl:max-w-[1320px] px-3 lg:px-10 xl:px-0 mx-auto">
         <p className="font-normal text-[36px] py-10 md:text-start text-center">
           Leadership <span className="text-[#4640DE]">Team</span>
         </p>

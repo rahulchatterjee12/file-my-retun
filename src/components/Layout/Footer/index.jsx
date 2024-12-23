@@ -140,7 +140,7 @@ const Footer = () => {
         <div className="flex justify-center mb-[36px]">
           <div className="flex md:relative flex-col justify-center md:justify-start">
             <img
-              src="assets/images/map.png"
+              src="/assets/images/map.png"
               alt="map"
               className="w-[188px] md:w-[348px] h-[188px] md:h-[348px]"
             />
