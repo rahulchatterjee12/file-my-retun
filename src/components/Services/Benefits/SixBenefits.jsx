@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
@@ -10,6 +10,69 @@ import "./styles.css";
 
 // import required modules
 import { EffectCoverflow, Pagination, navigation } from "swiper/modules";
+import DetailsPopup from "../DetailsPopup";
+
+const MobileCard = ({ item }) => {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+  return (
+    <>
+      <DetailsPopup open={open} handleClose={handleClose} />
+      <div className=" bg-[#8783F5] w-[322px] flex justify-between  h-[70px] px-[18px] py-3 md:py-[25px] rounded-[16px]">
+        <div className="w-[220px]">
+          <h3 className="text-white text-[12px]  font-bold">{item.title}</h3>
+          <p className="text-white text-[10px] mt-[8px]">{item.description}</p>
+        </div>
+        <div>
+          <img
+            src="/assets/images/Services/arrow.png"
+            className="w-[32px] h-[32px]"
+            alt=""
+            onClick={handleOpen}
+          />
+        </div>
+      </div>
+    </>
+  );
+};
+
+const PopupOpenBtn = () => {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+  return (
+    <>
+      <DetailsPopup open={open} handleClose={handleClose} />
+      <div
+        style={{
+          position: "absolute",
+          top: "16px",
+          right: "16px",
+          width: "32px",
+          height: "32px",
+          background: "#FFFFFF",
+          borderRadius: "50%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
+        }}
+        onClick={handleOpen}
+      >
+        <span
+          style={{
+            color: "#55EFC4",
+            fontSize: "16px",
+            fontWeight: "bold",
+          }}
+        >
+          →
+        </span>
+      </div>
+    </>
+  );
+};
 
 const SixBenefits = ({ data }) => {
   return (
@@ -40,31 +103,7 @@ const SixBenefits = ({ data }) => {
                 If you have paid more income tax you are eligible for a tax
                 refund
               </p>
-              <div
-                style={{
-                  position: "absolute",
-                  top: "16px",
-                  right: "16px",
-                  width: "32px",
-                  height: "32px",
-                  background: "#FFFFFF",
-                  borderRadius: "50%",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
-                }}
-              >
-                <span
-                  style={{
-                    color: "#55EFC4",
-                    fontSize: "16px",
-                    fontWeight: "bold",
-                  }}
-                >
-                  →
-                </span>
-              </div>
+              <PopupOpenBtn />
             </div>
             <div
               style={{
@@ -88,31 +127,7 @@ const SixBenefits = ({ data }) => {
                 If you have paid more income tax you are eligible for a tax
                 refund
               </p>
-              <div
-                style={{
-                  position: "absolute",
-                  top: "16px",
-                  right: "16px",
-                  width: "32px",
-                  height: "32px",
-                  background: "#FFFFFF",
-                  borderRadius: "50%",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
-                }}
-              >
-                <span
-                  style={{
-                    color: "#55EFC4",
-                    fontSize: "16px",
-                    fontWeight: "bold",
-                  }}
-                >
-                  →
-                </span>
-              </div>
+              <PopupOpenBtn />
             </div>
             <div
               style={{
@@ -136,31 +151,7 @@ const SixBenefits = ({ data }) => {
                 If you have paid more income tax you are eligible for a tax
                 refund
               </p>
-              <div
-                style={{
-                  position: "absolute",
-                  top: "16px",
-                  right: "16px",
-                  width: "32px",
-                  height: "32px",
-                  background: "#FFFFFF",
-                  borderRadius: "50%",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
-                }}
-              >
-                <span
-                  style={{
-                    color: "#55EFC4",
-                    fontSize: "16px",
-                    fontWeight: "bold",
-                  }}
-                >
-                  →
-                </span>
-              </div>
+              <PopupOpenBtn />
             </div>
             <div
               style={{
@@ -184,31 +175,7 @@ const SixBenefits = ({ data }) => {
                 If you have paid more income tax you are eligible for a tax
                 refund
               </p>
-              <div
-                style={{
-                  position: "absolute",
-                  top: "16px",
-                  right: "16px",
-                  width: "32px",
-                  height: "32px",
-                  background: "#FFFFFF",
-                  borderRadius: "50%",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
-                }}
-              >
-                <span
-                  style={{
-                    color: "#55EFC4",
-                    fontSize: "16px",
-                    fontWeight: "bold",
-                  }}
-                >
-                  →
-                </span>
-              </div>
+              <PopupOpenBtn />
             </div>
           </div>
         </div>
@@ -236,31 +203,7 @@ const SixBenefits = ({ data }) => {
                 If you have paid more income tax you are eligible for a tax
                 refund
               </p>
-              <div
-                style={{
-                  position: "absolute",
-                  top: "16px",
-                  right: "16px",
-                  width: "32px",
-                  height: "32px",
-                  background: "#FFFFFF",
-                  borderRadius: "50%",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
-                }}
-              >
-                <span
-                  style={{
-                    color: "#55EFC4",
-                    fontSize: "16px",
-                    fontWeight: "bold",
-                  }}
-                >
-                  →
-                </span>
-              </div>
+              <PopupOpenBtn />
             </div>
             <div
               style={{
@@ -284,31 +227,7 @@ const SixBenefits = ({ data }) => {
                 If you have paid more income tax you are eligible for a tax
                 refund
               </p>
-              <div
-                style={{
-                  position: "absolute",
-                  top: "16px",
-                  right: "16px",
-                  width: "32px",
-                  height: "32px",
-                  background: "#FFFFFF",
-                  borderRadius: "50%",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
-                }}
-              >
-                <span
-                  style={{
-                    color: "#55EFC4",
-                    fontSize: "16px",
-                    fontWeight: "bold",
-                  }}
-                >
-                  →
-                </span>
-              </div>
+              <PopupOpenBtn />
             </div>
           </div>
           <h3 className="text-[18px]  md:text-[36px] text-start w-[40%]">
@@ -338,23 +257,7 @@ const SixBenefits = ({ data }) => {
           >
             {data.features.map((item, i) => (
               <SwiperSlide key={i}>
-                <div className=" bg-[#8783F5] w-[322px] flex justify-between  h-[70px] px-[18px] py-3 md:py-[25px] rounded-[16px]">
-                  <div className="w-[220px]">
-                    <h3 className="text-white text-[12px]  font-bold">
-                      {item.title}
-                    </h3>
-                    <p className="text-white text-[10px] mt-[8px]">
-                      {item.description}
-                    </p>
-                  </div>
-                  <div>
-                    <img
-                      src="/assets/images/Services/arrow.png"
-                      className="w-[32px] h-[32px]"
-                      alt=""
-                    />
-                  </div>
-                </div>
+                <MobileCard item={item} />
               </SwiperSlide>
             ))}
           </Swiper>

@@ -1,7 +1,6 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 
 const style = {
@@ -16,14 +15,9 @@ const style = {
   borderRadius: "30px",
 };
 
-export default function DetailsPopup() {
-  const [open, setOpen] = useState(true);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
+export default function DetailsPopup({ open, handleClose }) {
   return (
     <div>
-      <Button onClick={handleOpen}>Open modal</Button>
       <Modal open={open} onClose={handleClose}>
         <Box sx={style}>
           <h2 className="text-center my-[10px] md:my-[32px]">
