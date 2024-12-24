@@ -10,7 +10,7 @@ const Data = {
   ),
   description:
     "Streamline your GST compliance with ease! Our intuitive platform simplifies GST registration, filing, and returns. Get accurate calculations, timely reminders, and expert support to avoid penalties. Whether you're a small business or enterprise, trust us for hassle-free GST management. Start today and stay compliant with India's GST regulations effortlessly!",
-  imgUrl: "assets/images/Services/hero.png",
+  imgUrl: "/assets/images/Services/hero.png",
   title2: (
     <>
       <span className="text-[#4640DE] text-[55px]">Benefits</span> <br /> Of
