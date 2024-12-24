@@ -15,11 +15,37 @@ import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import Logo from "@/components/common/Logo";
 import { useRouter, usePathname } from "next/navigation";
+import { Menu, MenuItem } from "@mui/material";
 
 const drawerWidth = 240;
 const navItems = [
   { title: "Home", href: "/" },
-  { title: "Services", href: "/services" },
+  {
+    title: "Services",
+    href: "/services",
+    subItems: [
+      {
+        title: "GST",
+        href: "/services/gst",
+      },
+      {
+        title: "Incorporation",
+        href: "/services/incorporation",
+      },
+      {
+        title: "Investments",
+        href: "/services/investments",
+      },
+      {
+        title: "NRI Services",
+        href: "/services/nri-services",
+      },
+      {
+        title: "Registration",
+        href: "/services/registration",
+      },
+    ],
+  },
   { title: "About Us", href: "/about-us" },
 ];
 
@@ -28,6 +54,7 @@ function Navbar() {
   const [isClient, setIsClient] = useState(false);
   const router = useRouter();
   const path = usePathname();
+  const [open, setOpen] = useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -96,22 +123,67 @@ function Navbar() {
                 }}
               >
                 {navItems.map((item) => (
-                  <button
-                    className={`relative px-4 py-2 text-sm ${
-                      item.href === path ? "text-[#4640DE]" : "text-[#666666]"
-                    }`}
-                    key={item.title}
-                    onClick={() => router.push(item.href)}
-                  >
-                    {item.title}
-                    <span
-                      className={`absolute bottom-0 left-0 h-[2px] w-full transform origin-left transition-transform duration-300 ${
-                        item.href === path
-                          ? "scale-x-100 bg-[#4640DE]"
-                          : "scale-x-0 bg-transparent"
-                      }`}
-                    />
-                  </button>
+                  <React.Fragment key={item.title}>
+                    {item.title !== "Services" ? (
+                      <button
+                        className={`relative px-4 py-2 text-sm ${
+                          item.href === path
+                            ? "text-[#4640DE]"
+                            : "text-[#666666]"
+                        }`}
+                        onClick={() => router.push(item.href)}
+                      >
+                        {item.title}
+                        <span
+                          className={`absolute bottom-0 left-0 h-[2px] w-full transform origin-left transition-transform duration-300 ${
+                            item.href === path
+                              ? "scale-x-100 bg-[#4640DE]"
+                              : "scale-x-0 bg-transparent"
+                          }`}
+                        />
+                      </button>
+                    ) : (
+                      <div>
+                        <button
+                          className={`relative px-4 py-2 text-sm ${
+                            item.href === path
+                              ? "text-[#4640DE]"
+                              : "text-[#666666]"
+                          }`}
+                          onClick={(e) => setOpen(e.currentTarget)}
+                        >
+                          {item.title}
+                          <span
+                            className={`absolute bottom-0 left-0 h-[2px] w-full transform origin-left transition-transform duration-300 ${
+                              item.href === path
+                                ? "scale-x-100 bg-[#4640DE]"
+                                : "scale-x-0 bg-transparent"
+                            }`}
+                          />
+                        </button>
+                        <Menu
+                          open={open}
+                          anchorEl={open}
+                          onClose={() => setOpen(false)}
+                          MenuListProps={{
+                            "aria-labelledby": "basic-button",
+                          }}
+                        >
+                          {item.subItems.map((i) => (
+                            <MenuItem
+                              key={i.title}
+                              onClick={() => {
+                                setOpen(false);
+                                router.push(i.href);
+                              }}
+                            >
+                              {i.title}
+                            </MenuItem>
+                          ))}
+                        </Menu>
+                      </div>
+                    )}
+                  </React.Fragment>
                 ))}
                 <Button
                   variant="outlined"
