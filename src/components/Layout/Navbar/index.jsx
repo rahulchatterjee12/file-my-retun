@@ -15,7 +15,15 @@ import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import Logo from "@/components/common/Logo";
 import { useRouter, usePathname } from "next/navigation";
-import { Menu, MenuItem } from "@mui/material";
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Menu,
+  MenuItem,
+  Typography,
+} from "@mui/material";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const drawerWidth = 240;
 const navItems = [
@@ -75,18 +83,44 @@ function Navbar() {
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item.title} disablePadding>
-            <ListItemButton
-              sx={{
-                textAlign: "start",
-                color: item.href !== path ? "black" : "#4640DE",
-              }}
-              onClick={() => router.push(item.href)}
-              disableRipple
-            >
-              <ListItemText primary={item.title} />
-            </ListItemButton>
-          </ListItem>
+          <React.Fragment key={item.title}>
+            {!item?.subItems ? (
+              <ListItem disablePadding>
+                <ListItemButton
+                  sx={{
+                    textAlign: "start",
+                    color: item.href !== path ? "black" : "#4640DE",
+                  }}
+                  onClick={() => router.push(item.href)}
+                  disableRipple
+                >
+                  <ListItemText primary={item.title} />
+                </ListItemButton>
+              </ListItem>
+            ) : (
+              <Accordion defaultExpanded sx={{ boxShadow: 0 }}>
+                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                  <Typography component="span">{item.title}</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  {item.subItems.map((i) => (
+                    <ListItem key={i.title} disablePadding>
+                      <ListItemButton
+                        sx={{
+                          textAlign: "start",
+                          color: i.href !== path ? "black" : "#4640DE",
+                        }}
+                        onClick={() => router.push(i.href)}
+                        disableRipple
+                      >
+                        <ListItemText primary={i.title} />
+                      </ListItemButton>
+                    </ListItem>
+                  ))}
+                </AccordionDetails>
+              </Accordion>
+            )}
+          </React.Fragment>
         ))}
       </List>
     </Box>
