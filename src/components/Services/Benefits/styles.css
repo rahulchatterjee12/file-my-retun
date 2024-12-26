@@ -13,6 +13,7 @@
 @media (max-width: 768px) {
   .swiper-slide {
     width: 361px;
+    height: 100px;
   }
 }
 
