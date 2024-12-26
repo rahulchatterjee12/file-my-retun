@@ -7,8 +7,8 @@ const Hero2 = () => {
         src="assets/images/Home/Businessman.png"
         className="w-[110px] h-[208px] md:h-[537px] md:w-[537px]"
       />
-      <div className=" w-[50%] md:w-[35%] md:mt-8 mt-4  text-center mb-5">
-        <h1 className=" text-[20px] md:text-[55px] font-bold text-wrap text-end">
+      <div className=" w-[50%] md:w-[40%] md:mt-8 mt-4  text-center mb-5">
+        <h1 className=" text-[20px] md:text-[55px] font-bold text-wrap text-start">
           Finance planning is Easy with a{" "}
           <span className="text-[#4640DE]"> personal CFO</span>
         </h1>

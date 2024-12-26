@@ -34,19 +34,21 @@ const ceos = [
 export default function AboutUsPage() {
   return (
     <>
-      <div className="max-w-[1140px] 2xl:max-w-[1320px] px-3 lg:px-10 xl:px-0 mx-auto">
+      <div className="mx-[26px]">
         <p className="font-normal text-[36px] py-10 md:text-start text-center">
           Leadership <span className="text-[#4640DE]">Team</span>
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-[15px]">
           {ceos.map((item, i) => (
             <div className="px-1" key={i}>
-              <img
-                src="/assets/ceoPic/qimat.png"
-                alt={item.name}
-                className="rounded md:w-[336px] w-[246px] hover:cursor-pointer grayscale hover:grayscale-0 transition-all duration-300 ease-in-out"
-              />
-              <div className="flex items-center">
+              <div className="flex justify-center">
+                <img
+                  src="/assets/ceoPic/qimat.png"
+                  alt={item.name}
+                  className="rounded-[10px] md:w-[336px] w-[246px] hover:cursor-pointer grayscale hover:grayscale-0 transition-all duration-300 ease-in-out"
+                />
+              </div>
+              <div className="flex items-center mt-[33px]">
                 <Link href={item.linkedin}>
                   <FaLinkedin className="h-[30px] w-[30px] text-[#0077B5]" />
                 </Link>
@@ -54,7 +56,9 @@ export default function AboutUsPage() {
                   {item.name}
                 </p>
               </div>
-              <p className="font-[400] text-[13px] text-start">{item.desc}</p>
+              <p className="font-[400] text-[13px]  text-justify mt-[14px]">
+                {item.desc}
+              </p>
             </div>
           ))}
         </div>
