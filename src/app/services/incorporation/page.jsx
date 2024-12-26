@@ -55,16 +55,16 @@ const Data = {
       description:
         "If you have paid more income tax you are eligible for a tax refund",
     },
-    {
-      title: "Input tax credit",
-      description:
-        "If you have paid more income tax you are eligible for a tax refund",
-    },
-    {
-      title: "GST Registration cancellation",
-      description:
-        "If you have paid more income tax you are eligible for a tax refund",
-    },
+    // {
+    //   title: "Input tax credit",
+    //   description:
+    //     "If you have paid more income tax you are eligible for a tax refund",
+    // },
+    // {
+    //   title: "GST Registration cancellation",
+    //   description:
+    //     "If you have paid more income tax you are eligible for a tax refund",
+    // },
   ],
 };
 
