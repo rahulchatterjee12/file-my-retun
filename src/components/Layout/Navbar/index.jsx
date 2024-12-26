@@ -123,6 +123,17 @@ function Navbar() {
           </React.Fragment>
         ))}
       </List>
+      <Button
+        variant="outlined"
+        sx={{
+          color: "#4640DE",
+          borderColor: "#4640DE",
+          borderRadius: "10px",
+        }}
+        onClick={() => router.push("/auth")}
+      >
+        Sign in / Sign up
+      </Button>
     </Box>
   );
 
