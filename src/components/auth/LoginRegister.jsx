@@ -10,6 +10,8 @@ import { useRouter } from "next/navigation";
 import { validateMobileNumber, validateEmail } from "@/helper/validation";
 import "react-toastify/dist/ReactToastify.css";
 import { toast, ToastContainer } from "react-toastify";
+import VisibilityIcon from "@mui/icons-material/Visibility";
+import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 
 const LoginRegister = ({ id }) => {
   const dispatch = useDispatch();
@@ -220,7 +222,11 @@ const LoginRegister = ({ id }) => {
                       onClick={togglePasswordVisibility}
                       className="absolute inset-y-0 right-0 flex items-center px-2 text-gray-400 focus:outline-none"
                     >
-                      {showPassword ? <>show</> : <>not show</>}
+                      {showPassword ? (
+                        <VisibilityIcon />
+                      ) : (
+                        <VisibilityOffIcon />
+                      )}
                     </button>
                   </div>
                 </div>
@@ -304,7 +310,11 @@ const LoginRegister = ({ id }) => {
                       onClick={togglePasswordVisibility}
                       className="absolute inset-y-0 right-0 flex items-center px-2 text-gray-400 focus:outline-none"
                     >
-                      {showPassword ? <>show</> : <>not show</>}
+                      {showPassword ? (
+                        <VisibilityIcon />
+                      ) : (
+                        <VisibilityOffIcon />
+                      )}
                     </button>
                   </div>
                 </div>

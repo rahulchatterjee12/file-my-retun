@@ -148,6 +148,7 @@ function Navbar() {
               background: "white",
               color: "black",
               boxShadow: 0,
+              px: { md: "45px" },
             }}
           >
             <Toolbar>
