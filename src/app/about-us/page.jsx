@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { FaLinkedin } from "react-icons/fa6";
 import React from "react";
@@ -34,18 +33,18 @@ const ceos = [
 export default function AboutUsPage() {
   return (
     <>
-      <div className="mx-[26px]">
+      <div className="mx-[26px] mt-[36px]">
         <p className="font-normal text-[36px] py-10 md:text-start text-center">
           Leadership <span className="text-[#4640DE]">Team</span>
         </p>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-[15px]">
           {ceos.map((item, i) => (
-            <div className="px-1" key={i}>
-              <div className="flex justify-center">
+            <div className="" key={i}>
+              <div className="flex md:justify-start justify-center">
                 <img
                   src="/assets/ceoPic/qimat.png"
                   alt={item.name}
-                  className="rounded-[10px] md:w-[336px] w-[246px] hover:cursor-pointer grayscale hover:grayscale-0 transition-all duration-300 ease-in-out"
+                  className="rounded-[10px] shadow-lg md:w-[336px] w-[246px] hover:cursor-pointer grayscale hover:grayscale-0 transition-all duration-300 ease-in-out"
                 />
               </div>
               <div className="flex items-center mt-[33px]">
@@ -56,18 +55,18 @@ export default function AboutUsPage() {
                   {item.name}
                 </p>
               </div>
-              <p className="font-[400] text-[13px]  text-justify mt-[14px]">
+              <p className="font-[400] text-[13px]  text-justify mt-[14px] md:w-[311px]">
                 {item.desc}
               </p>
             </div>
           ))}
         </div>
         <div>
-          <p className="font-normal text-[36px] py-10 md:text-start text-center">
+          <h2 className="font-normal text-[36px] py-10 md:text-start text-center">
             About <span className="text-[#4640DE]">Us</span>
-          </p>
-          <div className="flex md:flex-row flex-col-reverse">
-            <p className="font-[400] text-[15px] md:w-[750px]">
+          </h2>
+          <div className="flex md:flex-row flex-col-reverse justify-between">
+            <p className="font-[400] text-[15px] md:w-[800px]">
               Throughout our journey of over four illustrious decades, we have
               consistently delivered unparalleled service, continuously
               exceeding expectations in every interaction. Our success lies in
@@ -111,7 +110,7 @@ export default function AboutUsPage() {
             <img
               src="/assets/team/team.png"
               alt="logo"
-              className="md:w-[640px] w-[356px]  grayscale hover:cursor-pointer hover:grayscale-0 transition-all duration-300 ease-in-out"
+              className="md:w-[640px] rounded-[13px] w-[356px]  grayscale hover:cursor-pointer hover:grayscale-0 transition-all duration-500 ease-in-out"
             />
           </div>
         </div>

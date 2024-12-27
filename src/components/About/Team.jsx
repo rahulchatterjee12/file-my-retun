@@ -62,7 +62,7 @@ const team = [
 const Team = () => {
   return (
     <>
-      <div className="max-w-[1140px] 2xl:max-w-[1320px] px-3 lg:px-10 xl:px-0 mx-auto mb-20">
+      <div className="mx-[26px]">
         <p className="font-normal text-[36px] py-10">
           Meet the <span className="text-[#4640DE]">Team</span>
         </p>
