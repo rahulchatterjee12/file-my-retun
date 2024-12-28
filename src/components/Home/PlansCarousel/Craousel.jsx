@@ -11,7 +11,12 @@ import "swiper/css/pagination";
 import "./styles.css";
 
 // import required modules
-import { EffectCoverflow, Pagination, navigation } from "swiper/modules";
+import {
+  EffectCoverflow,
+  Pagination,
+  navigation,
+  Autoplay,
+} from "swiper/modules";
 
 const plans = [
   {
@@ -137,7 +142,7 @@ const PlanCart = ({ plan }) => {
 
       <div className="mt-[8px] md:mt-[15px] px-[15px] md:px-[33px] py-[10px]">
         {plan.features.map((feature, i) => (
-          <div key={i} className="flex gap-[24px] md:gap-[42px] mt-[8px]">
+          <div key={i} className="flex gap-[24px] md:gap-[42px] mt-[20px]">
             <div className="hidden md:block">
               <svg
                 width="25"
@@ -187,7 +192,7 @@ const PlanCart = ({ plan }) => {
             </span>
           </div>
         ))}
-        <button className="bg-black text-white text-[16px] px-[85px] md:px-[135px] py-[14px] md:py-[24px] rounded-[17px] mt-[8px] md:mt-[36px] text-nowrap">
+        <button className="bg-black text-white text-[16px] h-[72px] px-[85px] md:px-[135px] py-[14px] md:py-[2px] rounded-[17px] mt-[8px] md:mt-[36px] text-nowrap">
           File Now
         </button>
       </div>
@@ -211,7 +216,11 @@ export default function Carousel() {
           slideShadows: false,
         }}
         pagination={true}
-        modules={[EffectCoverflow, Pagination]}
+        modules={[EffectCoverflow, Pagination, Autoplay]}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         className="mySwiper"
         spaceBetween={200}
       >
