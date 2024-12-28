@@ -11,18 +11,20 @@ const brands = [
 
 const Brands = () => {
   return (
-    <div className="px-6 py-8">
+    <div className="px-[64px] py-8">
       <h4 className="text-[#666666] md:text-[20px] text-[12px]">
         Companies we have helped grow
       </h4>
-      <div className="flex  md:mt-[24px] gap-[56px] md:overflow-hidden overflow-scroll">
-        {brands.map((brand) => (
-          <img
-            className="h-[80] w-[160] md:h-[55] md:w-[109]"
-            key={brand}
-            src={brand}
-          />
-        ))}
+      <div className="flex overflow-hidden group gap-[56px] mt-[14px]">
+        <div className="animate-loop-scroll flex group-hover:paused gap-[56px]">
+          {brands.map((brand) => (
+            <img
+              className="md:h-[80] md:w-[160] h-[55] w-[109]"
+              key={brand}
+              src={brand}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

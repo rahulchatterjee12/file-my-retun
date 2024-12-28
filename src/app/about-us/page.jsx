@@ -39,7 +39,7 @@ export default function AboutUsPage() {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-[15px]">
           {ceos.map((item, i) => (
-            <div className="" key={i}>
+            <div className="md:mt-0 mt-[20px]" key={i}>
               <div className="flex md:justify-start justify-center">
                 <img
                   src="/assets/ceoPic/qimat.png"
@@ -65,8 +65,8 @@ export default function AboutUsPage() {
           <h2 className="font-normal text-[36px] py-10 md:text-start text-center">
             About <span className="text-[#4640DE]">Us</span>
           </h2>
-          <div className="flex md:flex-row flex-col-reverse justify-between">
-            <p className="font-[400] text-[15px] md:w-[800px]">
+          <div className="flex md:flex-row flex-col-reverse justify-between gap-[27px] md:gap-[110px]">
+            <p className="font-[400] text-[13px] md:w-[679px]">
               Throughout our journey of over four illustrious decades, we have
               consistently delivered unparalleled service, continuously
               exceeding expectations in every interaction. Our success lies in

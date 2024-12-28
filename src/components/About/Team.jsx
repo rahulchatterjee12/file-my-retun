@@ -70,8 +70,18 @@ const Team = () => {
           <div className="animate-loop-scroll flex group-hover:paused">
             {team.map((item, i) => (
               <div className="px-3 flex flex-col w-[200px]" key={i}>
-                <img src={item.img} alt="logo" width={200} height={200} />
-                <p className="font-normal text-[18px] text-black-300 text-center">
+                <div className="rounded-[10px]">
+                  <img
+                    src={item.img}
+                    alt="logo"
+                    width={200}
+                    height={200}
+                    style={{
+                      borderRadius: "10px",
+                    }}
+                  />
+                </div>
+                <p className="font-normal text-[18px] mt-[8px] text-black-300 text-center">
                   {item.name}
                 </p>
               </div>
@@ -83,8 +93,18 @@ const Team = () => {
           >
             {team.map((item, i) => (
               <div className="px-3 flex flex-col w-[200px]" key={i}>
-                <img src={item.img} alt="logo" width={200} height={200} />
-                <p className="font-normal text-[18px] text-black-300 text-center">
+                <div className="rounded-[10px]">
+                  <img
+                    src={item.img}
+                    alt="logo"
+                    width={200}
+                    height={200}
+                    style={{
+                      borderRadius: "10px",
+                    }}
+                  />
+                </div>
+                <p className="font-normal text-[18px] mt-[8px] text-black-300 text-center">
                   {item.name}
                 </p>
               </div>

@@ -83,7 +83,8 @@ const FiveBenefits = ({ data }) => {
           <div className="grid grid-cols-2 gap-[40px]">
             <div
               style={{
-                background: "linear-gradient(45deg, #8783F5, #00C8AE)",
+                background:
+                  "linear-gradient(100.11deg, #8783F5 2.91%, #00C8AE 100%)",
                 borderTopLeftRadius: "20px",
                 width: "386px",
                 height: "171px",
@@ -93,7 +94,7 @@ const FiveBenefits = ({ data }) => {
                 justifyContent: "space-between",
                 color: "#FFFFFF",
                 position: "relative",
-                boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+                boxShadow: "0px 4px 15px rgba(130, 130, 130, 0.25)",
               }}
             >
               <h3 style={{ fontSize: "24px", fontWeight: "bold", margin: 0 }}>
@@ -107,7 +108,8 @@ const FiveBenefits = ({ data }) => {
             </div>
             <div
               style={{
-                background: "linear-gradient(45deg, #8783F5, #00C8AE)",
+                background:
+                  "linear-gradient(100.11deg, #8783F5 2.91%, #00C8AE 100%)",
                 borderTopRightRadius: "20px",
                 width: "386px",
                 height: "171px",
@@ -117,7 +119,7 @@ const FiveBenefits = ({ data }) => {
                 justifyContent: "space-between",
                 color: "#FFFFFF",
                 position: "relative",
-                boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+                boxShadow: "0px 4px 15px rgba(130, 130, 130, 0.25)",
               }}
             >
               <h3 style={{ fontSize: "24px", fontWeight: "bold", margin: 0 }}>
@@ -131,7 +133,8 @@ const FiveBenefits = ({ data }) => {
             </div>
             <div
               style={{
-                background: "linear-gradient(45deg, #8783F5, #00C8AE)",
+                background:
+                  "linear-gradient(100.11deg, #8783F5 2.91%, #00C8AE 100%)",
                 borderBottomLeftRadius: "20px",
                 width: "386px",
                 height: "171px",
@@ -141,7 +144,7 @@ const FiveBenefits = ({ data }) => {
                 justifyContent: "space-between",
                 color: "#FFFFFF",
                 position: "relative",
-                boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+                boxShadow: "0px 4px 15px rgba(130, 130, 130, 0.25)",
               }}
             >
               <h3 style={{ fontSize: "24px", fontWeight: "bold", margin: 0 }}>
@@ -155,7 +158,8 @@ const FiveBenefits = ({ data }) => {
             </div>
             <div
               style={{
-                background: "linear-gradient(45deg, #8783F5, #00C8AE)",
+                background:
+                  "linear-gradient(100.11deg, #8783F5 2.91%, #00C8AE 100%)",
                 borderBottomRightRadius: "20px",
                 width: "386px",
                 height: "171px",
@@ -165,7 +169,7 @@ const FiveBenefits = ({ data }) => {
                 justifyContent: "space-between",
                 color: "#FFFFFF",
                 position: "relative",
-                boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+                boxShadow: "0px 4px 15px rgba(130, 130, 130, 0.25)",
               }}
             >
               <h3 style={{ fontSize: "24px", fontWeight: "bold", margin: 0 }}>
@@ -179,7 +183,8 @@ const FiveBenefits = ({ data }) => {
             </div>
             <div
               style={{
-                background: "linear-gradient(45deg, #8783F5, #00C8AE)",
+                background:
+                  "linear-gradient(100.11deg, #8783F5 2.91%, #00C8AE 100%)",
                 borderBottomLeftRadius: "20px",
                 borderBottomRightRadius: "20px",
                 width: "386px",
@@ -190,7 +195,7 @@ const FiveBenefits = ({ data }) => {
                 justifyContent: "space-between",
                 color: "#FFFFFF",
                 position: "relative",
-                boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+                boxShadow: "0px 4px 15px rgba(130, 130, 130, 0.25)",
               }}
               className="col-start-1 col-end-3 justify-self-center"
             >

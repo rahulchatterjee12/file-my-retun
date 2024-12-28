@@ -8,10 +8,10 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: "90%",
-  height: "80%",
+  width: { md: "1190px" },
+  height: { md: "716px" },
   bgcolor: "white",
-  p: { xs: "10px", md: "70px" },
+  px: { xs: "10px", md: "70px" },
   borderRadius: "30px",
 };
 
@@ -20,7 +20,7 @@ export default function DetailsPopup({ open, handleClose }) {
     <div>
       <Modal open={open} onClose={handleClose}>
         <Box sx={style}>
-          <h2 className="text-center my-[10px] md:my-[32px]">
+          <h2 className="text-center my-[10px] text-[#4640DE] text-[32px] md:my-[32px]">
             GST Registration
           </h2>
           <div className="text-[10px] md:text-[20px]">

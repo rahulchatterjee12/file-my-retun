@@ -6,7 +6,7 @@ import DetailsPopup from "./DetailsPopup";
 
 const Services = ({ data }) => {
   return (
-    <div>
+    <div className="mt-[105px]">
       <Hero
         title={data.title}
         description={data.description}
