@@ -3,7 +3,7 @@ import Hero from "./Hero";
 import Hero2 from "./Hero2";
 import Brands from "./Brands";
 import Highlights from "./Highlights";
-import Services from "./Services";
+import Services from "./Services/Services";
 import Benefits from "./Benefits";
 import Youtube from "./Youtube";
 import Plans from "./Plans";

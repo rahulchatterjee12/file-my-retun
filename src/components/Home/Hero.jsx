@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="bg-[#DDDDFE] flex justify-around gap-[50px] px-[138px]  pt-8 w-full items-start">
+    <div className="bg-[#DDDDFE] flex justify-around gap-[50px] px-[10px] md:px-[138px]  pt-8 w-full items-start">
       <img
         src="assets/images/Home/hero1.png"
         className="hidden md:block w-[90px] h-[210px] mt-[50px] md:h-[400px] md:w-[250px] mr-4 overflow-hidden"

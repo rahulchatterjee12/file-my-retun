@@ -1,27 +1,27 @@
 .swiper {
-  width: 100%;
+  width: 88%;
   padding-top: 50px;
   padding-bottom: 50px;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 .swiper-slide {
   background-position: center;
   background-size: cover;
-  width: 401px;
-  height: 586px;
 }
 
 @media (max-width: 768px) {
   .swiper-slide {
-    width: 271px;
+    width: 320px;
     height: 396px;
   }
 }
 
 .swiper-slide img {
-  width: 100%;
+  display: hidden;
 }
 
 .slider-container {
-  margin-bottom: 50px;
+  margin-bottom: 5px;
 }

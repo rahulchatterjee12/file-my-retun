@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import CountUp from "react-countup";
 
 const Highlights = () => {
   return (
@@ -13,7 +15,7 @@ const Highlights = () => {
       <div className="md:flex justify-around mt-[40px] hidden">
         <div>
           <h3 className="text-[#1D1D1B] text-center font-bold md:text-[48px]">
-            3,500k+
+            <CountUp start={0} end={3500} duration={2} /> <span>K+</span>
           </h3>
           <h5 className="text-[#666666] text-center font-semibold md:text-[20]">
             Income Tax Returns Filed
@@ -21,7 +23,7 @@ const Highlights = () => {
         </div>
         <div>
           <h3 className="text-[#1D1D1B] text-center font-bold md:text-[48px]">
-            120+
+            <CountUp start={0} end={120} duration={2} /> <span>+</span>
           </h3>
           <h5 className="text-[#666666] text-center font-semibold md:text-[20]">
             Companies <span className="text-[#293854]">Trusts us</span>
@@ -29,7 +31,7 @@ const Highlights = () => {
         </div>
         <div>
           <h3 className="text-[#1D1D1B] text-center font-bold md:text-[48px]">
-            500k+
+            <CountUp start={0} end={500} duration={2} /> <span>K+</span>
           </h3>
           <h5 className="text-[#666666] text-center font-semibold md:text-[20]">
             Individuals income Tax Returns Filed
@@ -41,7 +43,7 @@ const Highlights = () => {
         <div className="flex justify-around mt-[26px]">
           <div>
             <h3 className="text-[#1D1D1B] text-center font-bold text-[18px] md:text-[48px]">
-              120+
+              <CountUp start={0} end={120} duration={2} /> <span>+</span>
             </h3>
             <h5 className="text-[#666666] text-center font-semibold text-[10px] md:text-[20]">
               Companies Trusts us
@@ -49,7 +51,7 @@ const Highlights = () => {
           </div>
           <div>
             <h3 className="text-[#1D1D1B] text-center font-bold text-[18px] md:text-[48px]">
-              500K +
+              <CountUp start={0} end={500} duration={2} /> <span>K+</span>
             </h3>
             <h5 className="text-[#666666] text-center font-semibold text-[10px] md:text-[20]">
               Individuals tax returns filled
@@ -59,7 +61,7 @@ const Highlights = () => {
 
         <div className="mt-[12px]">
           <h3 className="text-[#1D1D1B] text-center font-bold text-[24px] md:text-[48px]">
-            3,500k+
+            <CountUp start={0} end={3500} duration={2} /> <span>K+</span>
           </h3>
           <h5 className="text-[#666666] text-center font-semibold text-[10px] md:text-[20]">
             Income Tax Returns Filed

@@ -3,7 +3,7 @@ import React from "react";
 
 const Testimonials = () => {
   return (
-    <div className="flex justify-center gap-[100px] md:flex-row flex-col items-center">
+    <div className="flex justify-center mt-[] md:gap-[100px] md:flex-row flex-col items-center">
       <div>
         <h2 className="md:text-[40px] text-[#666666] text-center text-[20px]">
           Testimonials

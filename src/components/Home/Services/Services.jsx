@@ -1,6 +1,14 @@
+"use client";
 import React from "react";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
-import MobileCarousel from "../common/MobileCarousel";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { EffectCoverflow, Pagination, navigation } from "swiper/modules";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "./services.css";
 
 const cardDetails = [
   {
@@ -71,7 +79,7 @@ const cardDetails = [
 
 const ServicesCard = ({ item }) => {
   return (
-    <div className="m__embla__slide shrink-0 grow-0 relative w-[320px] md:w-[381px] h-[300px] rounded-[6px] shadow-md px-[22px] py-[17px] font-bold">
+    <div className="relative w-[320px] md:w-[381px] h-[300px] rounded-[6px] shadow-md px-[22px] py-[17px] font-bold">
       <img
         src="assets/images/Home/arrow.png"
         alt=""
@@ -131,12 +139,29 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="md:hidden flex ml-5">
-        <MobileCarousel>
+      <div className="md:hidden flex">
+        <Swiper
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={"auto"}
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 2.25,
+            slideShadows: false,
+          }}
+          pagination={true}
+          modules={[EffectCoverflow, Pagination]}
+          className="mySwiper"
+          spaceBetween={200}
+        >
           {cardDetails.map((card, i) => (
-            <ServicesCard item={card} key={i} />
+            <SwiperSlide key={i}>
+              <ServicesCard item={card} key={i} />
+            </SwiperSlide>
           ))}
-        </MobileCarousel>
+        </Swiper>
       </div>
       <div className="flex justify-center">
         <img
