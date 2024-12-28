@@ -8,11 +8,11 @@ const Highlights = () => {
       <h2 className="text-center text-[20px] md:text-[40px] font-bold">
         Taxation handled <span className="text-[#4640DE]"> over seas.</span>
       </h2>
-      <h5 className="text-center md:text-[20px] text-[#656565] font-semibold">
+      <h5 className="text-center md:text-[20px] text-[#656565] font-semibold mt-[4px]">
         You focus on what matters the most
       </h5>
 
-      <div className="md:flex justify-around mt-[40px] hidden">
+      <div className="md:flex justify-between gap-[220px] mx-[200px] mt-[48px] hidden">
         <div>
           <h3 className="text-[#1D1D1B] text-center font-bold md:text-[48px]">
             <CountUp start={0} end={3500} duration={2} /> <span>K+</span>

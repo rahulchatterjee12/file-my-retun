@@ -79,7 +79,7 @@ const cardDetails = [
 
 const ServicesCard = ({ item }) => {
   return (
-    <div className="relative w-[320px] md:w-[381px] h-[300px] rounded-[6px] shadow-md px-[22px] py-[17px] font-bold">
+    <div className="relative w-[320px] md:w-[381px] h-[300px] rounded-[6px] shadow-[4px_0px_20px_rgba(0,0,0,0.1)] px-[22px] py-[17px] font-bold">
       <img
         src="assets/images/Home/arrow.png"
         alt=""
@@ -95,18 +95,17 @@ const ServicesCard = ({ item }) => {
         {item.types.map((type, i) => (
           <div
             key={i}
-            className="flex items-start align-middle mt-[8px] md:mt-[4px]"
+            className={`flex items-${
+              item.title === "Investments" ? "start" : "center"
+            } align-middle mt-[8px] md:mt-[4px]`}
           >
             <CheckCircleOutlineIcon
+              fontSize="21px"
               sx={{
-                fontWeight: 500,
+                fontWeight: "lighter",
               }}
             />
-            <p
-              className={`md:text-[${
-                item.title === "Investments" ? "14px" : "12px"
-              }] text-[10px] font-extralight ml-[15px]`}
-            >
+            <p className={`md:text-[13px]  font-extralight ml-[15px]`}>
               {type}
             </p>
           </div>
@@ -132,7 +131,7 @@ const Services = () => {
         <span className="text-[#4640DE]">File my return offer ?</span>
       </h2>
       <div className="md:flex justify-center hidden">
-        <div className="grid grid-cols-3 gap-[30px] mt-[45px]">
+        <div className="grid grid-cols-3 gap-[47px] mt-[45px]">
           {cardDetails.map((card, i) => (
             <ServicesCard item={card} key={i} />
           ))}

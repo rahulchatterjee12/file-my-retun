@@ -10,7 +10,7 @@ const Benefits = () => {
       </h2>
       <div className="md:mt-[40px]">
         <div className="flex justify-center">
-          <div className="md:grid grid-cols-2 gap-4 hidden ">
+          <div className="md:grid grid-cols-2 gap-[40px] hidden ">
             <div
               style={{
                 borderTopLeftRadius: "10px",
@@ -20,7 +20,7 @@ const Benefits = () => {
               <h3 className="text-white md:text-[24px] font-bold">
                 Claim Tax Refunds
               </h3>
-              <p className="text-white md:text-[18px]">
+              <p className="text-white mt-[18px] md:text-[18px]">
                 Claim refunds on excess tax payments faster by e-Filing{" "}
               </p>
             </div>
@@ -33,7 +33,7 @@ const Benefits = () => {
               <h3 className="text-white md:text-[24px] font-bold">
                 Getting Visa
               </h3>
-              <p className="text-white md:text-[18px]">
+              <p className="text-white mt-[18px] md:text-[18px]">
                 Foreign consulates may require you to furnish your income tax
                 returns for obtaining Visa
               </p>
@@ -47,7 +47,7 @@ const Benefits = () => {
               <h3 className="text-white md:text-[24px] font-bold">
                 Avoid Late Filing Fee
               </h3>
-              <p className="text-white md:text-[18px]">
+              <p className="text-white mt-[18px] md:text-[18px]">
                 A delay in filing ITR makes you liable to pay a fee of up to
                 INR.10,000
               </p>
@@ -61,7 +61,7 @@ const Benefits = () => {
               <h3 className="text-white md:text-[24px] font-bold">
                 Getting Loan or Credit Card
               </h3>
-              <p className="text-white md:text-[18px]">
+              <p className="text-white mt-[18px] md:text-[18px]">
                 By e-filing, you can avail a loan or opt for a credit card
                 easily
               </p>
@@ -81,7 +81,7 @@ const Benefits = () => {
                 <h3 className="text-white text-[12px] md:text-[24px] font-bold">
                   Claim Tax Refunds
                 </h3>
-                <p className="text-white text-[10px] md:text-[18px]">
+                <p className="text-white text-[10px] mt-[18px] md:text-[18px]">
                   Claim refunds on excess tax payments faster by e-Filing{" "}
                 </p>
               </div>
@@ -96,7 +96,7 @@ const Benefits = () => {
                 <h3 className="text-white text-[12px] md:text-[24px] font-bold">
                   Getting Visa
                 </h3>
-                <p className="text-white text-[10px] md:text-[18px]">
+                <p className="text-white text-[10px] mt-[18px] md:text-[18px]">
                   Foreign consulates may require you to furnish your income tax
                   returns for obtaining Visa
                 </p>
@@ -112,7 +112,7 @@ const Benefits = () => {
                 <h3 className="text-white text-[12px] md:text-[24px] font-bold">
                   Avoid Late Filing Fee
                 </h3>
-                <p className="text-white text-[10px] md:text-[18px]">
+                <p className="text-white text-[10px] mt-[18px] md:text-[18px]">
                   A delay in filing ITR makes you liable to pay a fee of up to
                   INR.10,000
                 </p>
@@ -128,7 +128,7 @@ const Benefits = () => {
                 <h3 className="text-white text-[12px] md:text-[24px] font-bold">
                   Getting Loan or Credit Card
                 </h3>
-                <p className="text-white text-[10px] md:text-[18px]">
+                <p className="text-white text-[10px] mt-[18px] md:text-[18px]">
                   By e-filing, you can avail a loan or opt for a credit card
                   easily
                 </p>
