@@ -8,9 +8,14 @@ const Hero2 = () => {
         className="w-[110px] h-[208px] md:h-[537px] md:w-[537px]"
       />
       <div className=" w-[50%] md:w-[665px] md:mt-8 mt-4  text-center mb-5">
-        <h1 className=" text-[20px] md:text-[55px] font-bold text-wrap text-center">
+        <h1 className="relative text-[20px] md:text-[55px] font-bold text-wrap text-right md:text-center">
           Finance planning is Easy with a{" "}
           <span className="text-[#4640DE]"> personal CFO</span>
+          <img
+            src="/assets/images/Home/coins.png"
+            alt=""
+            className="absolute w-[31px] h-[33px] md:w-[67px] md:h-[70px] bottom-2 md:bottom-0 md:-right-[20px]"
+          />
         </h1>
         <p className="font-semibold md:text-[16px] text-[10px] mt-[12px] text-[#666666]">
           Get access to Financial Planners who curate a tailore goal-based

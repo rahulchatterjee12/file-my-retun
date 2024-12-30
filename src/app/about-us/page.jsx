@@ -33,8 +33,8 @@ const ceos = [
 export default function AboutUsPage() {
   return (
     <>
-      <div className="mx-[26px] mt-[36px]">
-        <p className="font-normal text-[36px] py-10 md:text-start text-center">
+      <div className="mx-[26px] ">
+        <p className="font-normal text-[36px] py-[20px] md:text-start text-center">
           Leadership <span className="text-[#4640DE]">Team</span>
         </p>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-[15px]">

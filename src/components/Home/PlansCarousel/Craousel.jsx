@@ -142,7 +142,10 @@ const PlanCart = ({ plan }) => {
 
       <div className="mt-[8px] md:mt-[15px] px-[15px] md:px-[33px] py-[10px]">
         {plan.features.map((feature, i) => (
-          <div key={i} className="flex gap-[24px] md:gap-[42px] mt-[9px]">
+          <div
+            key={i}
+            className="flex gap-[24px] md:gap-[42px] md:mt-[15px] mt-[9px]"
+          >
             <div className="hidden md:block">
               <svg
                 width="25"
@@ -192,7 +195,7 @@ const PlanCart = ({ plan }) => {
             </span>
           </div>
         ))}
-        <button className="bg-black text-white text-[16px] md:h-[72px] px-[85px] md:px-[135px] py-[14px] md:py-[2px] rounded-[17px] mt-[8px] md:mt-[36px] text-nowrap">
+        <button className="bg-black text-white text-[16px] md:h-[72px] px-[85px] md:px-[135px] py-[14px] md:py-[2px] rounded-[17px] mt-[8px] md:mt-[40px] text-nowrap">
           File Now
         </button>
       </div>

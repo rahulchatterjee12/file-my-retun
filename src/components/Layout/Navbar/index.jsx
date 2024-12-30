@@ -54,7 +54,15 @@ const navItems = [
       },
     ],
   },
+  {
+    title: "Personal CFO",
+    href: "/personal-cfo",
+  },
   { title: "About Us", href: "/about-us" },
+  {
+    title: "Resources",
+    href: "/resources",
+  },
 ];
 
 function Navbar() {
@@ -181,7 +189,7 @@ function Navbar() {
                       >
                         {item.title}
                         <span
-                          className={`absolute bottom-0 left-0 h-[2px] w-full transform origin-left transition-transform duration-300 ${
+                          className={`absolute bottom-0 left-[18%] h-[2px] w-[65%] transform origin-left transition-transform duration-300 ${
                             item.href === path
                               ? "scale-x-100 bg-[#4640DE]"
                               : "scale-x-0 bg-transparent"
