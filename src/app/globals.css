@@ -50,6 +50,33 @@
   display: none !important;
 }
 
-.slick-slide div {
-  margin: 0 11px;
+.slick-slide {
+  background-color: rgb(255, 255, 255);
+}
+
+.slick-arrow {
+  display: none !important;
+}
+
+.slick-dots li {
+  background-color: #a8a8a8;
+  height: 6px !important;
+  width: 6px !important;
+  border-radius: 25px;
+  transition: width 0.7s ease-in-out;
+}
+
+.slick-dots li.slick-active {
+  background-color: #4640de;
+  height: 6px !important;
+  width: 39px !important;
+  border-radius: 25px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: transparent !important;
+}
+
+.slick-dots li button:before {
+  color: transparent !important;
 }

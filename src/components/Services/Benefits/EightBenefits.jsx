@@ -15,7 +15,13 @@ import DetailsPopup from "../DetailsPopup";
 const MobileCard = ({ item }) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleClose = () => {
+    setOpen(false);
+    const targetDiv = document.getElementById("contact-form");
+    if (targetDiv) {
+      targetDiv.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
   return (
     <>
       <DetailsPopup open={open} handleClose={handleClose} />

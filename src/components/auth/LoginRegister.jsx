@@ -149,7 +149,7 @@ const LoginRegister = ({ id }) => {
   return (
     <>
       <ToastContainer />
-      <div className="">
+      <div className="md:mb-[2px] mb-[60px]">
         <div className="flex pb-[36px] pt-[11px] justify-start ">
           <button
             onClick={handleSignInClick}

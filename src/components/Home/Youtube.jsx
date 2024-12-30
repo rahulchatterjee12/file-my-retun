@@ -34,18 +34,18 @@ const Youtube = () => {
       <div className="md:hidden ">
         <div className="">
           <Slider {...settings}>
-            <div className="">
-              <div className="flex justify-center items-center min-w-[282px] min-h-[201px] rounded-[10px] border-[1px] border-gray-200">
+            <div className="mx-[18px]">
+              <div className="flex justify-center items-center w-[335px] h-[201px] rounded-[10px] border-[1px] border-gray-200">
                 <div className="w-[97%] h-[97%] bg-white rounded-[10px] border-[1px] border-gray-100"></div>
               </div>
             </div>
-            <div className="">
-              <div className="flex justify-center items-center min-w-[282px] h-[201px] rounded-[10px] border-[1px] border-gray-200">
+            <div className="mx-[18px]">
+              <div className="flex justify-center items-center w-[335px] h-[201px] rounded-[10px] border-[1px] border-gray-200">
                 <div className="w-[97%] h-[97%] bg-white rounded-[10px] border-[1px] border-gray-100"></div>
               </div>
             </div>
-            <div className="">
-              <div className="flex justify-center items-center min-w-[282px] min-h-[201px] rounded-[10px] border-[1px] border-gray-200">
+            <div className="mx-[18px]">
+              <div className="flex justify-center items-center w-[335px] h-[201px] rounded-[10px] border-[1px] border-gray-200">
                 <div className="w-[97%] h-[97%] bg-white rounded-[10px] border-[1px] border-gray-100"></div>
               </div>
             </div>

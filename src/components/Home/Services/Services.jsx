@@ -143,7 +143,7 @@ const Services = () => {
       <div className="md:hidden">
         <Slider {...settings}>
           {cardDetails.map((card, i) => (
-            <div key={i} className="my-3 ml-7">
+            <div key={i} className="my-10 ml-7">
               <ServicesCard item={card} />
             </div>
           ))}

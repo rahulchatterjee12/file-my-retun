@@ -66,20 +66,20 @@ const Contact = () => {
 
   return (
     <div
-      className="md:w-[700px] mx-[15px] md:mx-auto pt-10 pb-20"
+      className="md:w-[700px] mx-[15px] md:mx-auto md:pt-10 pb-20"
       id="contact-form"
     >
-      <h2 className="text-[#4640DE] font-bold text-[40px] text-center">
+      <h2 className="text-[#4640DE] font-bold text-[20px] md:text-[40px] text-center">
         Got Questions?
       </h2>
-      <p className="text-[#000000] font-normal text-[32px] text-center mt-[12px]">
+      <p className="text-[#000000] font-normal text-[16px] md:text-[32px] text-center mt-[12px]">
         Team FMR is ready to fulfill all your GST needs
       </p>
       <form onSubmit={submitForm} className="text-[10px] md:text-[16px]">
         <p className="text-[16px] mx-2 md:mt-[46px] -mb-5">
           Our team will contact you shortly
         </p>
-        <div className="flex justify-between pt-8">
+        <div className="flex justify-between gap-2 pt-8">
           <input
             className="text-black border rounded border-[#A4B0C0] py-3 h-[30px] md:h-[64px] px-2 w-[174px] md:w-[345px]"
             type="text"
