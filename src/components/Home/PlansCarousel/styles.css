@@ -26,6 +26,15 @@
   margin-bottom: 50px;
 }
 
+.swiper-pagination-bullet {
+  border-radius: 25px;
+  transition: width 0.7s ease-in-out;
+  background: #6e6e6e;
+  height: 11px;
+  width: 11px;
+  border: 1px solid white;
+}
+
 .swiper-pagination-bullet-active {
   background: #4640de;
   width: 87px;
