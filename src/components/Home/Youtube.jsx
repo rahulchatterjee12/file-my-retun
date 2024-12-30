@@ -1,7 +1,15 @@
+"use client";
 import React from "react";
-import MobileCarousel from "../common/MobileCarousel";
+import Slider from "react-slick";
 
 const Youtube = () => {
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   return (
     <div className="bg-[#F8F8FD] py-10">
       <h3 className="md:text-[34px] text-[18px] font-bold text-center">
@@ -24,18 +32,24 @@ const Youtube = () => {
       </div>
 
       <div className="md:hidden ">
-        <div className=" flex gap-4 px-4">
-          <MobileCarousel>
-            <div className="flex justify-center items-center min-w-[282px] min-h-[201px] rounded-[10px] border-[1px] border-gray-200">
-              <div className="w-[97%] h-[97%] bg-white rounded-[10px] border-[1px] border-gray-100"></div>
+        <div className="">
+          <Slider {...settings}>
+            <div className="">
+              <div className="flex justify-center items-center min-w-[282px] min-h-[201px] rounded-[10px] border-[1px] border-gray-200">
+                <div className="w-[97%] h-[97%] bg-white rounded-[10px] border-[1px] border-gray-100"></div>
+              </div>
             </div>
-            <div className="flex justify-center items-center min-w-[282px] h-[201px] rounded-[10px] border-[1px] border-gray-200">
-              <div className="w-[97%] h-[97%] bg-white rounded-[10px] border-[1px] border-gray-100"></div>
+            <div className="">
+              <div className="flex justify-center items-center min-w-[282px] h-[201px] rounded-[10px] border-[1px] border-gray-200">
+                <div className="w-[97%] h-[97%] bg-white rounded-[10px] border-[1px] border-gray-100"></div>
+              </div>
             </div>
-            <div className="flex justify-center items-center min-w-[282px] h-[201px] rounded-[10px] border-[1px] border-gray-200">
-              <div className="w-[97%] h-[97%] bg-white rounded-[10px] border-[1px] border-gray-100"></div>
+            <div className="">
+              <div className="flex justify-center items-center min-w-[282px] min-h-[201px] rounded-[10px] border-[1px] border-gray-200">
+                <div className="w-[97%] h-[97%] bg-white rounded-[10px] border-[1px] border-gray-100"></div>
+              </div>
             </div>
-          </MobileCarousel>
+          </Slider>
         </div>
       </div>
 

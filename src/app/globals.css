@@ -49,3 +49,7 @@
 .slick-slide img {
   display: none !important;
 }
+
+.slick-slide div {
+  margin: 0 11px;
+}
