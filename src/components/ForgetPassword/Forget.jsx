@@ -18,7 +18,7 @@ const Forget = ({ onSubmit, setLocalData, localData }) => {
   };
 
   return (
-    <div className="bg-white py-8">
+    <div className="bg-white py-8 w-[426px]">
       <form className="space-y-6" onSubmit={handleSubmit}>
         <div>
           <label

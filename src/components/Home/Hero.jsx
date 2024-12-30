@@ -5,7 +5,7 @@ const Hero = () => {
     <div className="bg-[#DDDDFE] flex justify-around gap-[50px] px-[10px] md:px-[138px]  pt-8 w-full items-start">
       <img
         src="assets/images/Home/hero1.png"
-        className="hidden md:block w-[90px] h-[210px] mt-[50px] md:h-[400px] md:w-[250px] mr-4 overflow-hidden"
+        className="hidden md:block w-[90px] h-[350px] mt-[50px] md:w-[420px] mr-4 overflow-hidden"
       />
       <div className="md:mt-8 mt-4 text-start md:text-center mb-5">
         <h1 className=" text-[20px] md:text-[55px] font-bold text-wrap  ">
@@ -24,7 +24,7 @@ const Hero = () => {
       </div>
       <img
         src="assets/images/Home/hero2.png"
-        className="w-[90px] h-[210px] md:h-[400px] mt-[30px] md:w-[190px]"
+        className="w-[90px] h-[210px] md:h-[369px] mt-[30px] md:w-[190px]"
       />
     </div>
   );

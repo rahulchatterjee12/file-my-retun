@@ -66,7 +66,7 @@ export default function AboutUsPage() {
             About <span className="text-[#4640DE]">Us</span>
           </h2>
           <div className="flex md:flex-row flex-col-reverse justify-between gap-[27px] md:gap-[110px]">
-            <p className="font-[400] text-[13px] md:w-[679px]">
+            <p className="font-[400] text-[13px] md:w-[679px] text-justify">
               Throughout our journey of over four illustrious decades, we have
               consistently delivered unparalleled service, continuously
               exceeding expectations in every interaction. Our success lies in

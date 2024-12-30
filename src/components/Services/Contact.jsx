@@ -66,26 +66,29 @@ const Contact = () => {
 
   return (
     <div
-      className="md:w-[670px] mx-[15px] md:mx-auto pt-10 pb-20"
+      className="md:w-[700px] mx-[15px] md:mx-auto pt-10 pb-20"
       id="contact-form"
     >
-      <h2 className="text-[#4640DE] font-bold text-[30px] text-center">
-        Contact Us
+      <h2 className="text-[#4640DE] font-bold text-[40px] text-center">
+        Got Questions?
       </h2>
-      <p className="text-[#000000] font-normal text-[14px] text-center">
-        Please leave your message and we will contact you shortly
+      <p className="text-[#000000] font-normal text-[32px] text-center mt-[12px]">
+        Team FMR is ready to fulfill all your GST needs
       </p>
       <form onSubmit={submitForm} className="text-[10px] md:text-[16px]">
+        <p className="text-[16px] mx-2 md:mt-[46px] -mb-5">
+          Our team will contact you shortly
+        </p>
         <div className="flex justify-between pt-8">
           <input
-            className="text-black border rounded border-[#A4B0C0] py-3 h-[30px] md:h-[64px] px-2 w-[168px] md:w-[322px]"
+            className="text-black border rounded border-[#A4B0C0] py-3 h-[30px] md:h-[64px] px-2 w-[174px] md:w-[345px]"
             type="text"
             name="firstName"
             placeholder="First Name"
             onChange={handleChange}
           />
           <input
-            className="text-black border rounded border-[#A4B0C0] py-3 px-2 h-[30px] md:h-[64px] w-[168px] md:w-[322px]"
+            className="text-black border rounded border-[#A4B0C0] py-3 px-2 h-[30px] md:h-[64px] w-[174px] md:w-[345px]"
             type="text"
             name="lastName"
             placeholder="Last Name"

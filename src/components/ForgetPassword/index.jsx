@@ -86,24 +86,21 @@ const ForgetPassword = ({ id }) => {
   }, [dispatch, id]);
 
   return (
-    <div className="max-w-[1140px] 2xl:max-w-[1320px] px-3 lg:px-10 xl:px-0 mx-auto">
-      <div className="md:flex justify-between items-center">
+    <div className="mt-[35px]">
+      <div className="md:flex mx-[85px] my-[36px] gap-[135px] items-start mt-[105px]">
         <div
-          className="w-full md:w-[40%] lg:w-[62%] mt-6 hidden md:block"
+          className="hidden md:block"
           data-aos="fade-left"
           data-aos-delay="900"
         >
-          <div className="relative  rounded-lg overflow-hidden">
-            <div className="h-full ">
-              <img
-                src="/assets/images/register.png"
-                alt="Placeholder Image"
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            <div className="absolute w-[80%] h-[25%] bottom-20 rounded-md left-1/2 transform -translate-x-1/2 bg-black/20 backdrop-blur-lg text-white text-center py-3">
-              <p className="text-sm font-semibold">Image Clickable Link</p>
+          <div className="relative rounded-[27px] overflow-hidden w-[700px] h-[700px] shadow-[0px_4px_54px_rgba(0,0,0,0.25)]">
+            <img
+              src="/assets/images/register.png"
+              alt="Placeholder Image"
+              className="object-cover w-[700px] h-[700px]"
+            />
+            <div className="absolute w-[90%] h-[25%] bottom-[36px] rounded-md left-1/2 transform -translate-x-1/2 bg-gray-500/20 backdrop-blur-lg text-white text-center py-3">
+              <p className="text-sm font-semibold text-black"></p>
             </div>
           </div>
         </div>

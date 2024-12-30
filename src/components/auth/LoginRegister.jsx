@@ -150,7 +150,7 @@ const LoginRegister = ({ id }) => {
     <>
       <ToastContainer />
       <div className="">
-        <div className="flex py-3 justify-start ">
+        <div className="flex pb-[36px] pt-[11px] justify-start ">
           <button
             onClick={handleSignInClick}
             className={`font-medium w-[146px] text-[16px] py-[11px] rounded-l-[8px] ${
@@ -172,7 +172,7 @@ const LoginRegister = ({ id }) => {
             Register
           </button>
         </div>
-        <div className="bg-white py-8">
+        <div className="bg-white">
           <form className="space-y-6" onSubmit={handleSubmit}>
             {isSignInActive ? (
               <>

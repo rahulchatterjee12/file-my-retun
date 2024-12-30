@@ -18,7 +18,7 @@ const HomePage = () => {
       <Hero2 />
       <Highlights />
       <div className="bg-[#F8F8FD]">
-        <div className="rounded-b-[40px] bg-white md:pb-[70px]">
+        <div className="rounded-b-[40px] bg-white md:pb-[85px]">
           <Services />
           <Benefits />
         </div>
@@ -26,6 +26,9 @@ const HomePage = () => {
       </div>
       <Plans />
       <Story />
+      <div className="flex justify-center mt-[45px] mb-[45px]">
+        <div className="h-[1px] bg-gradient-to-r from-transparent via-gray-800 to-transparent md:w-[1134px] w-[293px]" />
+      </div>
       <Testimonials />
     </div>
   );

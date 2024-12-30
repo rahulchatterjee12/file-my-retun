@@ -100,7 +100,7 @@ const ServicesCard = ({ item }) => {
                 fontWeight: "lighter",
               }}
             />
-            <p className={`md:text-[13px]  font-extralight ml-[15px]`}>
+            <p className={`md:text-[14px]  font-extralight ml-[15px]`}>
               {type}
             </p>
           </div>

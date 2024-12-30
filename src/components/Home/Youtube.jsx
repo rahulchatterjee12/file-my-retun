@@ -18,14 +18,14 @@ const Youtube = () => {
       </h3>
 
       <div className="md:flex hidden justify-center gap-[37px] mt-[45px]">
-        <div className="flex justify-center items-center w-[800px] h-[560px] rounded-[10px] border-[1px] border-gray-200">
+        <div className="flex justify-center items-center w-[800px] h-[560px] rounded-[10px] border-[1px] border-[#A4B0C0]">
           <div className="w-[97%] h-[97%] bg-white rounded-[10px] border-[1px] border-gray-100"></div>
         </div>
         <div className="flex justify-between flex-col">
-          <div className="flex justify-center items-center w-[370px] h-[260px] rounded-[10px] border-[1px] border-gray-200">
+          <div className="flex justify-center items-center w-[370px] h-[260px] rounded-[10px] border-[1px] border-[#A4B0C0]">
             <div className="w-[97%] h-[97%] bg-white rounded-[10px] border-[1px] border-gray-100"></div>
           </div>
-          <div className="flex justify-center items-center w-[370px] h-[260px] rounded-[10px] border-[1px] border-gray-200">
+          <div className="flex justify-center items-center w-[370px] h-[260px] rounded-[10px] border-[1px] border-[#A4B0C0]">
             <div className="w-[97%] h-[97%] bg-white rounded-[10px] border-[1px] border-gray-100"></div>
           </div>
         </div>
@@ -60,7 +60,10 @@ const Youtube = () => {
             Go through all our video's and increase your financial literacy
           </p>
         </div>
-        <button className="bg-white text-[#4640DE] px-[30px] py-[20px] rounded-md text-[17px]">
+        <button
+          className="bg-white text-[#4640DE] px-[30px] py-[18px] font-bold rounded-md text-[17px]"
+          style={{ textShadow: "0px 4px 4px rgba(70,64,222,0.2)" }}
+        >
           More videos
         </button>
       </div>
