@@ -8,11 +8,11 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: { md: "1190px" },
-  height: { md: "716px" },
+  width: { xs: "90%", md: "85%" },
+  height: { xs: "85%", md: "90%" },
   bgcolor: "white",
   px: { xs: "10px", md: "70px" },
-  borderRadius: "30px",
+  borderRadius: { xs: "20px", md: "30px" },
 };
 
 export default function DetailsPopup({ open, handleClose }) {
@@ -20,10 +20,10 @@ export default function DetailsPopup({ open, handleClose }) {
     <div>
       <Modal open={open} onClose={handleClose}>
         <Box sx={style}>
-          <h2 className="text-center my-[10px] text-[#4640DE] text-[32px] md:my-[32px]">
+          <h2 className="text-center my-[10px] text-[#4640DE] text-[24px] md:my-[32px]">
             GST Registration
           </h2>
-          <div className="text-[10px] md:text-[20px]">
+          <div className="text-[10px] md:text-[19px]">
             <p className="font-bold">
               GST registration is compulsory for any business that is supplying
               goods or services in India. Team FMR assures you seamless GST
@@ -58,6 +58,14 @@ export default function DetailsPopup({ open, handleClose }) {
           <p className="md:mt-[25px] mt-[10px] md:text-[18px] text-[10px]">
             Experience hassle-free GST registration with our expert guidance.
           </p>
+          <div className="flex justify-center items-center mt-[35px] md:mt-[45px]">
+            <button
+              onClick={handleClose}
+              className="text-white bg-[#4640DE] text-[18px] md:text-[20px] h-[35px] md:h-[47px] w-[120px] md:w-[226px] rounded-[11px]"
+            >
+              Contact us
+            </button>
+          </div>
         </Box>
       </Modal>
     </div>

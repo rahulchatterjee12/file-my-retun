@@ -40,7 +40,13 @@ const MobileCard = ({ item }) => {
 const PopupOpenBtn = () => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleClose = () => {
+    setOpen(false);
+    const targetDiv = document.getElementById("contact-form");
+    if (targetDiv) {
+      targetDiv.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
   return (
     <>
       <DetailsPopup open={open} handleClose={handleClose} />
@@ -60,15 +66,12 @@ const PopupOpenBtn = () => {
         }}
         onClick={handleOpen}
       >
-        <span
-          style={{
-            color: "#55EFC4",
-            fontSize: "16px",
-            fontWeight: "bold",
-          }}
-        >
-          →
-        </span>
+        <img
+          src="/assets/images/Services/arrow.png"
+          className="w-[32px] h-[32px]"
+          alt=""
+          onClick={handleOpen}
+        />
       </div>
     </>
   );
@@ -78,8 +81,10 @@ const EightBenefits = ({ data }) => {
   return (
     <>
       <div className="md:block hidden">
-        <div className="md:mx-[112px] items-center flex justify-between">
-          <h3 className="text-[18px] md:text-[36px]">{data.title2}</h3>
+        <div className="md:mx-[112px] items-center flex md:gap-[130px]">
+          <h3 className="text-[18px] md:text-[36px] md:w-[25%]">
+            {data.title2}
+          </h3>
           <div className="grid grid-cols-2 gap-[40px]">
             <div
               style={{
@@ -183,7 +188,7 @@ const EightBenefits = ({ data }) => {
             </div>
           </div>
         </div>
-        <div className="mx-[112px] items-center flex justify-between my-[74px]">
+        <div className="mx-[112px] items-center flex md:gap-[130px] my-[74px]">
           <div className="grid grid-cols-2 gap-[40px]">
             <div
               style={{
@@ -286,7 +291,7 @@ const EightBenefits = ({ data }) => {
               <PopupOpenBtn />
             </div>
           </div>
-          <h3 className="text-[18px] md:text-[36px] text-start md:w-[30%]">
+          <h3 className="text-[18px] md:text-[36px] text-start md:w-[25%]">
             {data.title3}
           </h3>
         </div>

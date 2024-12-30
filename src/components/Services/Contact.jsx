@@ -65,7 +65,10 @@ const Contact = () => {
   };
 
   return (
-    <div className="md:w-[670px] mx-[15px] md:mx-auto pt-10 pb-20">
+    <div
+      className="md:w-[670px] mx-[15px] md:mx-auto pt-10 pb-20"
+      id="contact-form"
+    >
       <h2 className="text-[#4640DE] font-bold text-[30px] text-center">
         Contact Us
       </h2>

@@ -22,7 +22,7 @@ const Login = () => {
   }, [login, userData, router]);
 
   return (
-    <div className="bg-white bg-right-blue">
+    <div className="bg-white">
       <div className="">
         <div className="md:flex md:gap-[115px] justify-center md:justify-between mx-[16px] md:mx-[63px] md:my-[73px] items-center">
           <div
@@ -30,13 +30,13 @@ const Login = () => {
             data-aos="fade-left"
             data-aos-delay="900"
           >
-            <div className="relative rounded-[27px] overflow-hidden w-[774px] h-[774px] shadow-[0px_4px_54px_rgba(0,0,0,0.25)]">
+            <div className="relative rounded-[27px] overflow-hidden w-[760px] h-[760px] shadow-[0px_4px_54px_rgba(0,0,0,0.25)]">
               <img
                 src="/assets/images/register.png"
                 alt="Placeholder Image"
-                className="object-cover w-[774px] h-[774px]"
+                className="object-cover w-[760px] h-[760px]"
               />
-              <div className="absolute w-[80%] h-[25%] bottom-20 rounded-md left-1/2 transform -translate-x-1/2 bg-gray-500/20 backdrop-blur-lg text-white text-center py-3">
+              <div className="absolute w-[90%] h-[25%] bottom-20 rounded-md left-1/2 transform -translate-x-1/2 bg-gray-500/20 backdrop-blur-lg text-white text-center py-3">
                 <p className="text-sm font-semibold text-black">
                   Image Clickable Link
                 </p>
