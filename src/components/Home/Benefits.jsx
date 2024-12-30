@@ -15,7 +15,7 @@ const Benefits = () => {
               style={{
                 borderTopLeftRadius: "10px",
               }}
-              className="bg-[#8783F5] w-[386px] h-[171px] px-[18px] py-[25px]"
+              className="bg-[#8783F5] w-[386px] h-[171px] px-[18px] py-[25px] shadow-[0px_4px_15px_rgba(130,130,130,0.25)]"
             >
               <h3 className="text-white md:text-[24px] font-bold">
                 Claim Tax Refunds
@@ -28,7 +28,7 @@ const Benefits = () => {
               style={{
                 borderTopRightRadius: "10px",
               }}
-              className="bg-[#8783F5] w-[386px] h-[171px] px-[18px] py-[25px]"
+              className="bg-[#8783F5] w-[386px] h-[171px] px-[18px] py-[25px] shadow-[0px_4px_15px_rgba(130,130,130,0.25)]"
             >
               <h3 className="text-white md:text-[24px] font-bold">
                 Getting Visa
@@ -42,7 +42,7 @@ const Benefits = () => {
               style={{
                 borderBottomLeftRadius: "10px",
               }}
-              className="bg-[#8783F5] w-[386px] h-[171px] px-[18px] py-[25px]"
+              className="bg-[#8783F5] w-[386px] h-[171px] px-[18px] py-[25px] shadow-[0px_4px_15px_rgba(130,130,130,0.25)]"
             >
               <h3 className="text-white md:text-[24px] font-bold">
                 Avoid Late Filing Fee
@@ -56,7 +56,7 @@ const Benefits = () => {
               style={{
                 borderBottomRightRadius: "10px",
               }}
-              className="bg-[#8783F5] w-[386px] h-[171px] px-[18px] py-[25px]"
+              className="bg-[#8783F5] w-[386px] h-[171px] px-[18px] py-[25px] shadow-[0px_4px_15px_rgba(130,130,130,0.25)]"
             >
               <h3 className="text-white md:text-[24px] font-bold">
                 Getting Loan or Credit Card
@@ -73,7 +73,7 @@ const Benefits = () => {
           <MobileCarousel>
             <div className="m__embla__slide shrink-0 grow-0">
               <div
-                className=" bg-[#8783F5] w-[322px] h-[86px] px-[18px] py-3 md:py-[25px]"
+                className=" bg-[#8783F5] w-[322px] h-[86px] px-[18px] py-3 md:py-[25px] shadow-[0px_4px_15px_rgba(130,130,130,0.25)]"
                 style={{
                   borderRadius: "10px",
                 }}
@@ -88,7 +88,7 @@ const Benefits = () => {
             </div>
             <div className="m__embla__slide shrink-0 grow-0">
               <div
-                className=" bg-[#8783F5] w-[322px]  h-[86px] px-[18px] py-3 md:py-[25px]"
+                className=" bg-[#8783F5] w-[322px]  h-[86px] px-[18px] py-3 md:py-[25px] shadow-[0px_4px_15px_rgba(130,130,130,0.25)]"
                 style={{
                   borderRadius: "10px",
                 }}
@@ -104,7 +104,7 @@ const Benefits = () => {
             </div>
             <div className="m__embla__slide shrink-0 grow-0">
               <div
-                className="bg-[#8783F5] w-[322px]  h-[86px] px-[18px] py-3 md:py-[25px]"
+                className="bg-[#8783F5] w-[322px]  h-[86px] px-[18px] py-3 md:py-[25px] shadow-[0px_4px_15px_rgba(130,130,130,0.25)]"
                 style={{
                   borderRadius: "10px",
                 }}
@@ -120,7 +120,7 @@ const Benefits = () => {
             </div>
             <div className="m__embla__slide shrink-0 grow-0">
               <div
-                className="bg-[#8783F5] w-[322px]  h-[86px] px-[18px] py-3 md:py-[25px]"
+                className="bg-[#8783F5] w-[322px]  h-[86px] px-[18px] py-3 md:py-[25px] shadow-[0px_4px_15px_rgba(130,130,130,0.25)]"
                 style={{
                   borderRadius: "10px",
                 }}

@@ -113,7 +113,7 @@ const plans = [
 
 const PlanCart = ({ plan }) => {
   return (
-    <div className="md:w-[401px] w-[271px] md:h-[586px] h-[396px] shadow-md rounded-[21px] border-[2px] border-[#262378]">
+    <div className="md:w-[401px] w-[271px] md:h-[586px] h-[396px] shadow-md rounded-[21px] border-[2px] border-[#262378] bg-white">
       <div className="border-b-[2px] border-b-[#262378] pb-[12px]">
         <h4 className="text-[#4640DE] text-[20px] md:text-[24px] font-bold text-center mt-[8px] md:mt-[15px]">
           {plan.title}

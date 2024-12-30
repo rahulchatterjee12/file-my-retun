@@ -9,7 +9,7 @@ const Story = () => {
       </div>
 
       <div className="md:grid md:grid-cols-3 md:overflow-hidden overflow-scroll gap-5 flex mx-2 my-3 py-2">
-        <div className="md:w-[382px] h-[256px] min-w-[308px] shadow-md px-4 rounded-[8px]">
+        <div className="md:w-[382px] h-[256px] min-w-[308px] border border-black/10 shadow-[0px_4px_4px_rgba(0,0,0,0.15)] px-4 rounded-[8px]">
           <img
             src="assets/images/star.png"
             alt="star"
@@ -80,6 +80,10 @@ const Story = () => {
             year
           </p>
         </div>
+      </div>
+
+      <div className="flex justify-center md:mb-[55px]">
+        <div className="h-[1px] bg-gradient-to-r from-transparent via-gray-800 to-transparent md:w-[1134px] w-[293px]" />
       </div>
     </div>
   );

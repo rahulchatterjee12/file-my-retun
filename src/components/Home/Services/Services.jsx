@@ -162,12 +162,8 @@ const Services = () => {
           ))}
         </Swiper>
       </div>
-      <div className="flex justify-center">
-        <img
-          src="assets/images/Home/line.png"
-          alt=""
-          className="items-center w-[293px] md:w-[1134px] mt-[24px] md:mt-[70px]"
-        />
+      <div className="flex justify-center mt-[54px]">
+        <div className="h-[1px] bg-gradient-to-r from-transparent via-gray-800 to-transparent md:w-[1134px] w-[293px]" />
       </div>
     </div>
   );

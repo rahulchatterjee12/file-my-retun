@@ -17,9 +17,13 @@ const HomePage = () => {
       <Brands />
       <Hero2 />
       <Highlights />
-      <Services />
-      <Benefits />
-      <Youtube />
+      <div className="bg-[#F8F8FD]">
+        <div className="rounded-b-[40px] bg-white md:pb-[70px]">
+          <Services />
+          <Benefits />
+        </div>
+        <Youtube />
+      </div>
       <Plans />
       <Story />
       <Testimonials />

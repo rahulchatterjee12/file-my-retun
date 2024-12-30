@@ -11,7 +11,7 @@ const brands = [
 
 const Brands = () => {
   return (
-    <div className="px-[64px] py-8">
+    <div className="px-[64px] py-8 shadow-[0px_4px_21px_rgba(0,0,0,0.1)]">
       <h4 className="text-[#666666] md:text-[20px] text-[12px]">
         Companies we have helped grow
       </h4>

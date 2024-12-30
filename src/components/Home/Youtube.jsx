@@ -3,7 +3,7 @@ import MobileCarousel from "../common/MobileCarousel";
 
 const Youtube = () => {
   return (
-    <div className="mt-[24px] md:mt-[70] bg-[#F8F8FD] py-10">
+    <div className="bg-[#F8F8FD] py-10">
       <h3 className="md:text-[34px] text-[18px] font-bold text-center">
         FileMyReturn on YouTube for{" "}
         <span className="text-[#FF0000]">insightful Financial content! </span>
