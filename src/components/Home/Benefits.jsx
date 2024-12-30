@@ -1,7 +1,15 @@
+"use client";
 import React from "react";
-import MobileCarousel from "../common/MobileCarousel";
+import Slider from "react-slick";
 
 const Benefits = () => {
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   return (
     <div className="md:mt-[45px] mt-[24px]">
       <h2 className="md:text-center text-start px-4 text-[20px] md:text-[40px] font-bold">
@@ -69,9 +77,9 @@ const Benefits = () => {
           </div>
         </div>
 
-        <div className="md:hidden px-2">
-          <MobileCarousel>
-            <div className="m__embla__slide shrink-0 grow-0">
+        <div className="md:hidden px-2 mt-[11px]">
+          <Slider {...settings}>
+            <div className="ml-5">
               <div
                 className=" bg-[#8783F5] w-[322px] h-[86px] px-[18px] py-3 md:py-[25px] shadow-[0px_4px_15px_rgba(130,130,130,0.25)]"
                 style={{
@@ -86,7 +94,7 @@ const Benefits = () => {
                 </p>
               </div>
             </div>
-            <div className="m__embla__slide shrink-0 grow-0">
+            <div className="ml-5">
               <div
                 className=" bg-[#8783F5] w-[322px]  h-[86px] px-[18px] py-3 md:py-[25px] shadow-[0px_4px_15px_rgba(130,130,130,0.25)]"
                 style={{
@@ -102,7 +110,7 @@ const Benefits = () => {
                 </p>
               </div>
             </div>
-            <div className="m__embla__slide shrink-0 grow-0">
+            <div className="ml-5">
               <div
                 className="bg-[#8783F5] w-[322px]  h-[86px] px-[18px] py-3 md:py-[25px] shadow-[0px_4px_15px_rgba(130,130,130,0.25)]"
                 style={{
@@ -118,7 +126,7 @@ const Benefits = () => {
                 </p>
               </div>
             </div>
-            <div className="m__embla__slide shrink-0 grow-0">
+            <div className="ml-3">
               <div
                 className="bg-[#8783F5] w-[322px]  h-[86px] px-[18px] py-3 md:py-[25px] shadow-[0px_4px_15px_rgba(130,130,130,0.25)]"
                 style={{
@@ -134,7 +142,7 @@ const Benefits = () => {
                 </p>
               </div>
             </div>
-          </MobileCarousel>
+          </Slider>
         </div>
       </div>
     </div>
