@@ -12,7 +12,7 @@ const Benefits = () => {
   };
   return (
     <div className="md:mt-[45px] mt-[24px]">
-      <h2 className="md:text-center text-start px-4 text-[20px] md:text-[40px] font-bold">
+      <h2 className="md:text-center text-start px-4 text-[18px] md:text-[40px] font-bold">
         <span className="text-[#4640DE]">Key Benefits</span>of e-filling your
         income tax returns
       </h2>

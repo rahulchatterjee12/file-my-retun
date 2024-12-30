@@ -128,9 +128,9 @@ const Services = () => {
   };
   return (
     <div>
-      <h2 className="text-center text-[20px] md:text-[40px] font-bold mt-[24px] md:mt-[36px]">
+      <h2 className="text-center text-[18px] md:text-[40px] font-bold mt-[24px] md:mt-[36px]">
         What services does{" "}
-        <span className="text-[#4640DE]">File my return offer</span>
+        <span className="text-[#4640DE]">File my return offer?</span>
       </h2>
       <div className="md:flex justify-center hidden">
         <div className="grid grid-cols-3 gap-[47px] mt-[45px]">

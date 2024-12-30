@@ -13,8 +13,10 @@ const Youtube = () => {
   return (
     <div className="bg-[#F8F8FD] py-10">
       <h3 className="md:text-[34px] text-[18px] font-bold text-center">
-        FileMyReturn on YouTube for{" "}
-        <span className="text-[#FF0000]">insightful Financial content! </span>
+        FileMyReturn on YouTube for <br />
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4640DE] to-[#FF0000]">
+          insightful Financial content!{" "}
+        </span>
       </h3>
 
       <div className="md:flex hidden justify-center gap-[37px] mt-[45px]">
