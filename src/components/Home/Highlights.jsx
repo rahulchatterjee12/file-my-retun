@@ -14,7 +14,7 @@ const Highlights = () => {
 
       <div className="md:flex justify-between gap-[220px] mx-[200px] mt-[48px] hidden">
         <div>
-          <h3 className="text-[#1D1D1B] text-center font-bold md:text-[48px]">
+          <h3 className="text-[#1D1D1B] text-center font-bold md:text-[48px] text-nowrap">
             <CountUp start={0} end={3500} duration={2} /> <span>K+</span>
           </h3>
           <h5 className="text-[#666666] text-center font-semibold md:text-[20]">
