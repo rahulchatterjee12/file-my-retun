@@ -69,7 +69,7 @@ const Team = () => {
         <div className="flex overflow-hidden group">
           <div className="animate-loop-scroll flex group-hover:paused">
             {team.map((item, i) => (
-              <div className="px-3 flex flex-col w-[200px]" key={i}>
+              <div className="px-3 flex flex-col  w-[200px]" key={i}>
                 <div className="rounded-[10px]">
                   <img
                     src={item.img}
