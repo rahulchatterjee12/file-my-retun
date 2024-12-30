@@ -1,14 +1,9 @@
 "use client";
 import React from "react";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-import { EffectCoverflow, Pagination, navigation } from "swiper/modules";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
-import "./services.css";
+import Slider from "react-slick";
+import Avatar from "./Avatar";
 
 const cardDetails = [
   {
@@ -79,7 +74,7 @@ const cardDetails = [
 
 const ServicesCard = ({ item }) => {
   return (
-    <div className="relative w-[320px] md:w-[381px] h-[300px] rounded-[6px] shadow-[4px_0px_20px_rgba(0,0,0,0.1)] px-[22px] py-[17px] font-bold">
+    <div className="relative w-[320px] md:w-[381px] md:h-[300px] h-[340px] rounded-[6px] shadow-[4px_0px_20px_rgba(0,0,0,0.1)] px-[22px] py-[17px] font-bold">
       <img
         src="assets/images/Home/arrow.png"
         alt=""
@@ -113,8 +108,8 @@ const ServicesCard = ({ item }) => {
       </div>
       <div className=" bottom-[10px] absolute">
         <div className="md:justify-start flex gap-[75px]">
-          <img src="assets/images/Home/avatars.png" alt="" className="" />
-          <button className="md:hidden text-[12px] bg-[#4640DE] py-[5px] px-[10px] text-white rounded-[20px]">
+          <Avatar />
+          <button className="md:hidden text-[12px] bg-[#4640DE] py-[5px] px-[10px] text-nowrap text-white rounded-[20px]">
             Know More
           </button>
         </div>
@@ -124,6 +119,13 @@ const ServicesCard = ({ item }) => {
 };
 
 const Services = () => {
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   return (
     <div>
       <h2 className="text-center text-[20px] md:text-[40px] font-bold mt-[24px] md:mt-[70px]">
@@ -138,29 +140,14 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="md:hidden flex">
-        <Swiper
-          grabCursor={true}
-          centeredSlides={true}
-          slidesPerView={"auto"}
-          coverflowEffect={{
-            rotate: 0,
-            stretch: 0,
-            depth: 100,
-            modifier: 2.25,
-            slideShadows: false,
-          }}
-          pagination={true}
-          modules={[EffectCoverflow, Pagination]}
-          className="mySwiper"
-          spaceBetween={200}
-        >
+      <div className="md:hidden">
+        <Slider {...settings}>
           {cardDetails.map((card, i) => (
-            <SwiperSlide key={i}>
-              <ServicesCard item={card} key={i} />
-            </SwiperSlide>
+            <div key={i} className="my-3 ml-7">
+              <ServicesCard item={card} />
+            </div>
           ))}
-        </Swiper>
+        </Slider>
       </div>
       <div className="flex justify-center mt-[54px]">
         <div className="h-[1px] bg-gradient-to-r from-transparent via-gray-800 to-transparent md:w-[1134px] w-[293px]" />

@@ -45,3 +45,7 @@
     animation-play-state: paused;
   }
 }
+
+.slick-slide img {
+  display: none !important;
+}
