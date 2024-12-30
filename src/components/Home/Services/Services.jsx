@@ -92,7 +92,7 @@ const ServicesCard = ({ item }) => {
             key={i}
             className={`flex items-${
               item.title === "Investments" ? "start" : "center"
-            } align-middle mt-[8px] md:mt-[4px]`}
+            } align-middle mt-[10px] md:mt-[4px]`}
           >
             <CheckCircleOutlineIcon
               fontSize="21px"
@@ -128,7 +128,7 @@ const Services = () => {
   };
   return (
     <div>
-      <h2 className="text-center text-[20px] md:text-[40px] font-bold mt-[24px] md:mt-[70px]">
+      <h2 className="text-center text-[20px] md:text-[40px] font-bold mt-[24px] md:mt-[36px]">
         What services does{" "}
         <span className="text-[#4640DE]">File my return offer</span>
       </h2>
