@@ -6,7 +6,7 @@ const Hero = () => {
       <div className="bg-[#DDDDFE] hidden md:flex justify-around gap-[50px] px-[10px] md:px-[138px]  pt-8 w-full items-start">
         <img
           src="assets/images/Home/hero1.png"
-          className="hidden md:block w-[90px] h-[339px] mt-[54px] md:w-[299px] mr-4 overflow-hidden"
+          className="hidden md:block w-[90px] h-[339px] mt-[54px] md:w-[365px] mr-4 overflow-hidden"
         />
         <div className="md:mt-8 mt-4 text-start md:text-center mb-5">
           <h1 className="md:text-[55px] font-bold text-wrap  ">
