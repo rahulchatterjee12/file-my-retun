@@ -13,12 +13,12 @@ const Youtube = () => {
   return (
     <div className="bg-[#F8F8FD] py-10">
       <h3 className="md:text-[34px] text-[18px] font-bold text-center">
-        FileMyReturn on YouTube for <br />
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4640DE] to-[#FF0000]">
+        FileMyReturn on YouTube for
+        <span className="text-transparent text-[#FF0000]">
+          {" "}
           insightful Financial content!{" "}
         </span>
       </h3>
-
       <div className="md:flex hidden justify-center gap-[37px] mt-[45px]">
         <div className="flex justify-center items-center w-[800px] h-[560px] rounded-[10px] border-[1px] border-[#A4B0C0]">
           <div className="w-[97%] h-[97%] bg-white rounded-[10px] border-[1px] border-gray-100"></div>
@@ -35,6 +35,13 @@ const Youtube = () => {
 
       <div className="md:hidden ">
         <div className="">
+          <h3 className="md:text-[34px] text-[18px] font-bold text-center">
+            FileMyReturn on YouTube for
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4640DE] to-[#FF0000]">
+              {" "}
+              insightful Financial content!{" "}
+            </span>
+          </h3>
           <Slider {...settings}>
             <div className="mx-[18px]">
               <div className="flex justify-center items-center w-[335px] h-[201px] rounded-[10px] border-[1px] border-gray-200">
