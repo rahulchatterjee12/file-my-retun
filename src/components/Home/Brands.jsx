@@ -16,7 +16,7 @@ const Brands = () => {
         Companies we have helped to grow
       </h4>
       <div className="flex overflow-hidden group gap-[56px] mt-[14px]">
-        <div className="animate-loop-scroll-phone md:animate-loop-scroll flex group-hover:paused md:gap-[56px]">
+        <div className="animate-loop-scroll-phone md:animate-loop-scroll flex md:gap-[56px]">
           {brands.map((brand) => (
             <img
               className="md:h-[80] md:w-[160] h-[55] w-[109]"

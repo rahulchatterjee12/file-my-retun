@@ -21,7 +21,7 @@ const Benefits = () => {
           <div className="md:grid grid-cols-2 gap-[40px] hidden ">
             <div
               style={{
-                borderTopLeftRadius: "10px",
+                borderTopLeftRadius: "20px",
               }}
               className="bg-[#8783F5] w-[386px] h-[171px] px-[18px] py-[25px] shadow-[0px_4px_15px_rgba(130,130,130,0.25)]"
             >
@@ -34,7 +34,7 @@ const Benefits = () => {
             </div>
             <div
               style={{
-                borderTopRightRadius: "10px",
+                borderTopRightRadius: "20px",
               }}
               className="bg-[#8783F5] w-[386px] h-[171px] px-[18px] py-[25px] shadow-[0px_4px_15px_rgba(130,130,130,0.25)]"
             >
@@ -48,7 +48,7 @@ const Benefits = () => {
             </div>
             <div
               style={{
-                borderBottomLeftRadius: "10px",
+                borderBottomLeftRadius: "20px",
               }}
               className="bg-[#8783F5] w-[386px] h-[171px] px-[18px] py-[25px] shadow-[0px_4px_15px_rgba(130,130,130,0.25)]"
             >
@@ -62,7 +62,7 @@ const Benefits = () => {
             </div>
             <div
               style={{
-                borderBottomRightRadius: "10px",
+                borderBottomRightRadius: "20px",
               }}
               className="bg-[#8783F5] w-[386px] h-[171px] px-[18px] py-[25px] shadow-[0px_4px_15px_rgba(130,130,130,0.25)]"
             >
@@ -83,7 +83,7 @@ const Benefits = () => {
               <div
                 className=" bg-[#8783F5] w-[322px] h-[86px] px-[18px] py-3 md:py-[25px] shadow-[0px_4px_15px_rgba(130,130,130,0.25)]"
                 style={{
-                  borderRadius: "10px",
+                  borderRadius: "20px",
                 }}
               >
                 <h3 className="text-white text-[12px] md:text-[24px] font-bold">
@@ -98,7 +98,7 @@ const Benefits = () => {
               <div
                 className=" bg-[#8783F5] w-[322px]  h-[86px] px-[18px] py-3 md:py-[25px] shadow-[0px_4px_15px_rgba(130,130,130,0.25)]"
                 style={{
-                  borderRadius: "10px",
+                  borderRadius: "20px",
                 }}
               >
                 <h3 className="text-white text-[12px] md:text-[24px] font-bold">
@@ -114,7 +114,7 @@ const Benefits = () => {
               <div
                 className="bg-[#8783F5] w-[322px]  h-[86px] px-[18px] py-3 md:py-[25px] shadow-[0px_4px_15px_rgba(130,130,130,0.25)]"
                 style={{
-                  borderRadius: "10px",
+                  borderRadius: "20px",
                 }}
               >
                 <h3 className="text-white text-[12px] md:text-[24px] font-bold">
@@ -130,7 +130,7 @@ const Benefits = () => {
               <div
                 className="bg-[#8783F5] w-[322px]  h-[86px] px-[18px] py-3 md:py-[25px] shadow-[0px_4px_15px_rgba(130,130,130,0.25)]"
                 style={{
-                  borderRadius: "10px",
+                  borderRadius: "20px",
                 }}
               >
                 <h3 className="text-white text-[12px] md:text-[24px] font-bold">
