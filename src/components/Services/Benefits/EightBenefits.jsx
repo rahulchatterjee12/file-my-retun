@@ -84,6 +84,7 @@ const PopupOpenBtn = () => {
 };
 
 const EightBenefits = ({ data }) => {
+  console.log(data, "hi2");
   return (
     <>
       <div className="md:block hidden">
