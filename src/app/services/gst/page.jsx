@@ -1,5 +1,5 @@
-import Services from "@/components/Services";
 import React from "react";
+import Services from "@/components/Services";
 
 const Data = {
   title: (
@@ -26,7 +26,7 @@ const Data = {
   mobileTitle: "Key Benefits of e-filling your GST returns with us",
   features: [
     {
-      item: "GST Registration",
+      title: "GST Registration",
       description:
         "GST registration is compulsory for any business that is supplying goods or services in India. Team FMR assures you seamless GST registration.",
       keyPoints: [
@@ -41,7 +41,7 @@ const Data = {
       link: "https://filemyreturn.blog/gst-registration/",
     },
     {
-      item: "GST Return Filing",
+      title: "GST Return Filing",
       description:
         "Regular GST filings to the tax authorities need to be made for reporting the sales, purchases and GST payments made. Count on Team FMR's expertise for seamless GST return filing.",
       keyPoints: [
@@ -57,7 +57,7 @@ const Data = {
       link: "https://filemyreturn.blog/gst-return-filing/",
     },
     {
-      item: "GST LUT Filing (Letter of Undertaking)",
+      title: "GST LUT Filing (Letter of Undertaking)",
       description:
         "Looking to ease your GST LUT filing process? Team FMR, your trusted experts, can assist!",
       keyPoints: [
@@ -72,7 +72,7 @@ const Data = {
       link: null,
     },
     {
-      item: "GST Invoicing and e-Invoicing",
+      title: "GST Invoicing and e-Invoicing",
       description:
         "GST Invoicing along with e-Invoicing has played a pivotal role in GST regime. GoI introduced the concept of e-Invoicing for a transparent invoicing process. Team FMR offers you seamless e-invoicing services.",
       keyPoints: [
@@ -86,7 +86,7 @@ const Data = {
       link: null,
     },
     {
-      item: "GST Annual Return",
+      title: "GST Annual Return",
       description:
         "Looking for a smooth and accurate GST Annual Return filing experience? Our GST experts from Team FMR have got you covered!",
       keyPoints: [
@@ -99,7 +99,7 @@ const Data = {
       link: null,
     },
     {
-      item: "e-Way Bill",
+      title: "e-Way Bill",
       description:
         "E-way bill is an electronic document required for the movement of goods valued above a specified threshold seamlessly across different states. Team FMR can assist with generation of accurate E-way bill.",
       keyPoints: [
@@ -113,7 +113,7 @@ const Data = {
       link: null,
     },
     {
-      item: "GST Registration Cancellation",
+      title: "GST Registration Cancellation",
       description:
         "In cases of cessation of business operations or closure of business, you may want to get GST registration canceled. Team FMR is there to assist you with GST registration cancellation process.",
       keyPoints: [
@@ -127,7 +127,7 @@ const Data = {
       link: null,
     },
     {
-      item: "Input Tax Credit",
+      title: "Input Tax Credit",
       description:
         "Input Tax Credit or ITC is a mechanism for businesses to claim credit for the GST paid on inputs used in the supply of goods or services. Team FMR can help derive the most accurate & maximum benefit for ITC claims.",
       keyPoints: [

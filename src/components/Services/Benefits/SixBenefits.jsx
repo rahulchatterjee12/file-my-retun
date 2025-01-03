@@ -15,7 +15,13 @@ import DetailsPopup from "../DetailsPopup";
 const MobileCard = ({ item }) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleClose = () => {
+    setOpen(false);
+    const targetDiv = document.getElementById("contact-form");
+    if (targetDiv) {
+      targetDiv.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
   return (
     <>
       <DetailsPopup open={open} handleClose={handleClose} />
@@ -37,10 +43,50 @@ const MobileCard = ({ item }) => {
   );
 };
 
+const DesktopCard = ({ data, index }) => {
+  const borderRadiusStyles = {
+    0: { borderTopLeftRadius: "20px" },
+    1: { borderTopRightRadius: "20px" },
+    2: { borderBottomLeftRadius: "20px" },
+    3: { borderBottomRightRadius: "20px" },
+  };
+
+  const style = borderRadiusStyles[index % 4] || {};
+
+  return (
+    <div
+      style={{
+        background: "linear-gradient(100.11deg, #8783F5 2.91%, #00C8AE 100%)",
+        width: "386px",
+        height: "171px",
+        padding: "16px",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        color: "#FFFFFF",
+        position: "relative",
+        boxShadow: "0px 4px 15px rgba(130, 130, 130, 0.25)",
+        ...style,
+      }}
+    >
+      <h3 style={{ fontSize: "18px", fontWeight: "bold", margin: 0 }}>
+        {data.title}
+      </h3>
+      <p style={{ fontSize: "14px", margin: 0 }}>{data.description}</p>
+      <PopupOpenBtn data={data} />
+    </div>
+  );
+};
 const PopupOpenBtn = () => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleClose = () => {
+    setOpen(false);
+    const targetDiv = document.getElementById("contact-form");
+    if (targetDiv) {
+      targetDiv.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
   return (
     <>
       <DetailsPopup open={open} handleClose={handleClose} />
@@ -60,183 +106,40 @@ const PopupOpenBtn = () => {
         }}
         onClick={handleOpen}
       >
-        <span
-          style={{
-            color: "#55EFC4",
-            fontSize: "16px",
-            fontWeight: "bold",
-          }}
-        >
-          →
-        </span>
+        <img
+          src="/assets/images/Services/arrow.png"
+          className="w-[32px] h-[32px]"
+          alt=""
+          onClick={handleOpen}
+        />
       </div>
     </>
   );
 };
 
 const SixBenefits = ({ data }) => {
+  const firstGroup = data.features.slice(0, 4);
+  const secondGroup = data.features.slice(4, 8);
   return (
     <>
       <div className="md:block hidden">
-        <div className="md:mx-[112px] items-center flex justify-between">
-          <h3 className="text-[18px]  md:text-[36px]">{data.title2}</h3>
+        <div className="md:mx-[112px] items-center flex md:gap-[130px]">
+          <h3 className="text-[18px] md:text-[36px] md:w-[25%]">
+            {data.title2}
+          </h3>
           <div className="grid grid-cols-2 gap-[40px]">
-            <div
-              style={{
-                background:
-                  "linear-gradient(100.11deg, #8783F5 2.91%, #00C8AE 100%)",
-                borderTopLeftRadius: "20px",
-                width: "386px",
-                height: "171px",
-                padding: "16px",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-between",
-                color: "#FFFFFF",
-                position: "relative",
-                boxShadow: "0px 4px 15px rgba(130, 130, 130, 0.25)",
-              }}
-            >
-              <h3 style={{ fontSize: "24px", fontWeight: "bold", margin: 0 }}>
-                GST registration
-              </h3>
-              <p style={{ fontSize: "18px", margin: 0 }}>
-                If you have paid more income tax you are eligible for a tax
-                refund
-              </p>
-              <PopupOpenBtn />
-            </div>
-            <div
-              style={{
-                background:
-                  "linear-gradient(100.11deg, #8783F5 2.91%, #00C8AE 100%)",
-                borderTopRightRadius: "20px",
-                width: "386px",
-                height: "171px",
-                padding: "16px",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-between",
-                color: "#FFFFFF",
-                position: "relative",
-                boxShadow: "0px 4px 15px rgba(130, 130, 130, 0.25)",
-              }}
-            >
-              <h3 style={{ fontSize: "24px", fontWeight: "bold", margin: 0 }}>
-                GST registration
-              </h3>
-              <p style={{ fontSize: "18px", margin: 0 }}>
-                If you have paid more income tax you are eligible for a tax
-                refund
-              </p>
-              <PopupOpenBtn />
-            </div>
-            <div
-              style={{
-                background:
-                  "linear-gradient(100.11deg, #8783F5 2.91%, #00C8AE 100%)",
-                borderBottomLeftRadius: "20px",
-                width: "386px",
-                height: "171px",
-                padding: "16px",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-between",
-                color: "#FFFFFF",
-                position: "relative",
-                boxShadow: "0px 4px 15px rgba(130, 130, 130, 0.25)",
-              }}
-            >
-              <h3 style={{ fontSize: "24px", fontWeight: "bold", margin: 0 }}>
-                GST registration
-              </h3>
-              <p style={{ fontSize: "18px", margin: 0 }}>
-                If you have paid more income tax you are eligible for a tax
-                refund
-              </p>
-              <PopupOpenBtn />
-            </div>
-            <div
-              style={{
-                background:
-                  "linear-gradient(100.11deg, #8783F5 2.91%, #00C8AE 100%)",
-                borderBottomRightRadius: "20px",
-                width: "386px",
-                height: "171px",
-                padding: "16px",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-between",
-                color: "#FFFFFF",
-                position: "relative",
-                boxShadow: "0px 4px 15px rgba(130, 130, 130, 0.25)",
-              }}
-            >
-              <h3 style={{ fontSize: "24px", fontWeight: "bold", margin: 0 }}>
-                GST registration
-              </h3>
-              <p style={{ fontSize: "18px", margin: 0 }}>
-                If you have paid more income tax you are eligible for a tax
-                refund
-              </p>
-              <PopupOpenBtn />
-            </div>
+            {firstGroup.map((item, i) => (
+              <DesktopCard data={item} index={i} key={i} />
+            ))}
           </div>
         </div>
-        <div className="mx-[112px] items-center flex justify-between my-[74px]">
+        <div className="mx-[112px] items-center flex md:gap-[130px] my-[74px]">
           <div className="grid grid-cols-2 gap-[40px]">
-            <div
-              style={{
-                background:
-                  "linear-gradient(100.11deg, #8783F5 2.91%, #00C8AE 100%)",
-                borderTopLeftRadius: "20px",
-                width: "386px",
-                height: "171px",
-                padding: "16px",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-between",
-                color: "#FFFFFF",
-                position: "relative",
-                boxShadow: "0px 4px 15px rgba(130, 130, 130, 0.25)",
-              }}
-            >
-              <h3 style={{ fontSize: "24px", fontWeight: "bold", margin: 0 }}>
-                GST registration
-              </h3>
-              <p style={{ fontSize: "18px", margin: 0 }}>
-                If you have paid more income tax you are eligible for a tax
-                refund
-              </p>
-              <PopupOpenBtn />
-            </div>
-            <div
-              style={{
-                background:
-                  "linear-gradient(100.11deg, #8783F5 2.91%, #00C8AE 100%)",
-                borderTopRightRadius: "20px",
-                width: "386px",
-                height: "171px",
-                padding: "16px",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-between",
-                color: "#FFFFFF",
-                position: "relative",
-                boxShadow: "0px 4px 15px rgba(130, 130, 130, 0.25)",
-              }}
-            >
-              <h3 style={{ fontSize: "24px", fontWeight: "bold", margin: 0 }}>
-                GST registration
-              </h3>
-              <p style={{ fontSize: "18px", margin: 0 }}>
-                If you have paid more income tax you are eligible for a tax
-                refund
-              </p>
-              <PopupOpenBtn />
-            </div>
+            {secondGroup.map((item, i) => (
+              <DesktopCard data={item} index={i} key={i} />
+            ))}
           </div>
-          <h3 className="text-[18px]  md:text-[36px] text-start w-[30%]">
+          <h3 className="text-[18px] md:text-[36px] text-start md:w-[25%]">
             {data.title3}
           </h3>
         </div>
